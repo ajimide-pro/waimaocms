@@ -1,0 +1,86 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'bannerIco';
+	src: url(../fonts/indexBanner.ttf);
+}
+@font-face {
+	font-family: 'barlow-m';
+	src: url(../fonts/Barlow\ Medium.woff.ttf);
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	list-style: none;
+	font-family: '微软雅黑';
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+	font-weight: normal;
+}
+body {
+	min-height: 100%;
+	font-size: 0;
+}
+p,
+ul,
+li {
+	margin: 0;
+}
+a:hover {
+	color: #ee1f26;
+	text-decoration: none;
+}
+dt,
+.size-o {
+	font-size: 0;
+}
+img {
+	max-width: 100%;
+	border: none;
+}
+input,
+select,
+option,
+textarea {
+	outline: none;
+	resize: none;
+	-webkit-appearance: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn:hover {
+	outline: none;
+	background: none;
+	box-shadow: none;
+}
+label {
+	cursor: pointer;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.w1200{
+	width: 92%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.clear::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.blockList{
+    height: 80px;
+    background: #333;
+}

@@ -1,0 +1,57 @@
+<div class="header">
+    <div class="w1200">
+        <div class="logo left">
+            <a href="/" title="{$config.title}">
+                <img src="{$config.logo|image_url}" alt="{$config.title}" />
+            </a>
+        </div>
+        <div class="right">
+            <ul class="nav" style="margin-right: 200px;">
+
+
+                <?php
+
+                foreach($navigation as $n)
+                {
+                      $outflag=$n['outflag']?'target="_blank"':'';
+                ?>
+                <li><a href="{$n.url}" <?php  echo $outflag;?>>{$n.title}<span></span></a></li>
+                <?php
+                }
+                ?>
+            </ul>
+            <!--
+            <div class="menu1">
+                <a href="javascript:;" class="login">登录</a>
+            </div>
+            -->
+            <div class="loggedIn">
+                <div class="content clear">
+                    <div class="img"><img src="/view/{$erdai_template}/images/user_img.jpg" alt=""></div>
+                    <div class="name">落叶</div>
+                    <span><img src="/view/{$erdai_template}/images/down.png"></span>
+                    <div class="list">
+                        <div class="ico"><img src="/view/{$erdai_template}/images/headerSelectIco.png" alt=""></div>
+                        <!-- <a href="javascript:;">我的信息</a> -->
+                        <a href="javascript:">授权证书</a>
+                        <!-- <a href="javascript:;">登录记录</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <!-- <a href="javascript:;" class="login">登录</a> -->
+                <img class="login" src="/view/{$erdai_template}//images/touxiang.png" alt="">
+                <li class="hamnav">
+                    <span class="hambur"></span>
+                </li>
+            </div>
+        </div>
+    </div>
+    <div class="hammenu">
+        <li class="active"><a href="javascript:">首页<span></span></a></li>
+        <li><a href="download.html">下载<span></span></a></li>
+        <li><a href="grant.html">购买<span></span></a></li>
+        <li><a href="authorization.html">授权查询<span></span></a></li>
+        <li><a href="javascript:">手册<span></span></a></li>
+    </div>
+</div>

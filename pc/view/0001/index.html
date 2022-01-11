@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="{$contraller|strtolower}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+    <title>{$config.title}</title>
+    <meta name="keywords" content="{$config.keyword}" />
+    <meta name="description" content="{$config.description}" />
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/pintuer.css" />
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/style.css" />
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/pintuer.js"></script>
+    <script src="/view/{$erdai_template}/js/jquery.flexslider-min.js"></script>
+    <script src="/view/{$erdai_template}/js/main.js"></script>
+
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="/view/{$erdai_template}/js/respond.js"></script>
+    <![endif]-->
+
+</head>
+<body id="index_box_id">
+
+{include file="view/$erdai_template/public/header.html" /}
+
+<!-- banner begin-->
+<div class="layout" id="fh5co-hero">
+    <div class="line">
+        <div class="flexslider">
+            <ul class="slides">
+
+<?php
+foreach($ad_hdp as $i=>$a)
+{
+                $outflag=$a['outflag']?'target="_blank"':''
+?>
+            <li>   <a href="{$a.url}" <?php echo $outflag;  ?>><img src="{$a.image.0.url}" alt="{$i}" /></a></li>
+                <?php
+}
+?>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- banner end-->
+<!-- Products begin-->
+<div id="fh5co-product-list">
+    <div class="layout padding-large-bottom">
+        <div class="container">
+            <div class="line">
+                <div class="x12 fh5co-heading">
+                    <h2>{:mylang('index.HOTPRODUCT',$contraller)}</h2>
+                </div>
+            </div>
+            <div class="line-big show-list">
+
+                <?php
+                foreach($product_list as $p)
+                {
+                ?>
+                <div class="xm3 xb3 xs4 xl6 margin-large-bottom">
+                <div class="pro-item">
+                    <div class="portfolio-img"><a href="<?php echo content_url($p['id'],$p['lang']);?>" title="Programmable Controllers2" class="media-img zoomimgs"  style="background-image:url({$p.litpic})"></a></div>
+                    <h2 class="text-center"><a href="<?php echo content_url($p['id'],$p['lang']);?>" title="Programmable Controllers2">{$p.title}</a></h2>
+                </div>
+              </div>
+                <?php
+                }
+                ?>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Products end-->
+<!-- about us begin-->
+<div id="fh5co-about-us">
+    <div class="layout bg-about bg-inverse">
+        <div class="container">
+            <div class="show-content text-center">
+                <h2>{:mylang('index.AboutUs',$contraller)}</h2>
+                <div class="about-box margin-big-bottom" > <p>
+                    {$about.description}
+                </p> </div>
+                <a href="<?php echo page_url($about['id'],$about['lang']);?>" class="btn btn-info view-all" role="button"><span class="rightward"></span>&nbsp;{:mylang('index.VIEWALL',$contraller)}</a> </div>
+        </div>
+    </div>
+</div>
+<!--  about us  end-->
+<!-- news begin-->
+<div id="fh5co-case-list">
+    <div class="layout bg-case">
+        <div class="container">
+            <div class="line">
+                <div class="x12 fh5co-heading text-center">
+                    <h2>{:mylang('index.SUCCESSFULCASE',$contraller)}</h2>
+                </div>
+            </div>
+            <div class="line-big show-list">
+
+                <?php
+                foreach($case_list as $l)
+                {
+                ?>
+                <div class="xm3 xb3 xs4 xl6 margin-large-bottom">
+                <div class="portfolio-img"><a href="<?php echo case_url($l['id'],$l['lang']);?>" title="{$l.title}"><span class="artzoomimgs" style="background-image:url(<?php echo getimage($l['image'],1);  ?>)"></span></a></div>
+                <h2 class="text-center"><a href="<?php echo case_url($l['id'],$l['lang']);?>" title="{$l.title}">{$l.title}</a></h2>
+            </div>
+                <?php
+                }
+                ?>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bottom begin-->
+<div id="fh5co-info-list" class="padding-large-bottom">
+    <div class="layout padding-large-top">
+        <div class="container">
+            <div class="line-big">
+                <!-- news begin-->
+                <div id="fh5co-news-list" class="padding-large-bottom xs7 xm7 xl12 news-box">
+                    <div class="fh5co-heading">
+                        <h2>{:mylang('index.NEWS',$contraller)}</h2>
+                    </div>
+                    <div class="show-list">
+                        <ul class="article-media clearfix">
+
+                            <?php
+                            foreach($news_list as $n)
+                            {
+                            ?>
+                            <li><span class='float-right hidden-l'>{$n.time|gettime} </span><a href='<?php echo news_url($n['id'],$n['lang']);?>' title='{$n.title}'>{$n.title}</a></li>
+                             <?php
+                             }
+                             ?>
+                        </ul>
+                    </div>
+                </div>
+                <!-- news end-->
+                <!-- contact us begin-->
+                <div id="fh5co-contact-us" class="padding-large-bottom xs5 xm5 xl12 about-box">
+                    <div class="x12 fh5co-heading"> <h2>{:mylang('index.ContactUs',$contraller)}</h2> </div>
+                    <div class="contact-content">
+                        <?php
+                        foreach($contact as $c)
+                        {
+                        ?>
+                        <p> {$c.title}：{$c.description}</p>
+                         <?php
+                         }
+                         ?>
+
+                    </div>
+                </div>
+                <!-- contact us end-->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/view/{$erdai_template}/js//index.js"></script>
+<!-- bottom end-->
+<!--footer-->
+{include file="view/$erdai_template/public/footer.html" /}
+
+<!--footer-->
+</body>
+</html>

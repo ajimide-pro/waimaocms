@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="{$contraller|strtolower}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+    <title><?php if($data['seo_title']!='') echo $data['seo_title'];else echo $data['title']  ?></title>
+    <meta name="keywords" content="{$data.keyword}" />
+    <meta name="description" content="{$data.description}" />
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/pintuer.css" />
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/style.css" />
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.caroufredsel.packed.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/pintuer.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/jquery.fancybox.css" media="screen" />
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $( ".image-popup").fancybox();
+        });
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="/skin/js/respond_3.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- header begin-->
+{include file="view/$erdai_template/public/header.html" /}
+
+<!-- header end-->
+
+<div class="layout">
+    <div id="carousel-banner" class="slideshow">
+
+        <?php
+        foreach($ad_list as $ad)
+        {
+        ?>
+        <img src='<?php echo image_url('uploads/'.$ad['image'][0]['name']); ?>'  alt=''>
+        <?php
+        }
+        ?>
+
+    </div>
+    <script type="text/javascript">
+        $(window).bind("load resize",function(){
+            $('#carousel-banner').carouFredSel({
+                width       : '100%',
+                auto: false,
+                items: 1,
+                scroll: {
+                    fx: 'fade',
+                    duration: 2000
+                }
+            });
+        });
+    </script>
+</div>
+<!-- content begin-->
+<div class="layout">
+    <div class="container margin-big-top content_detail" id="fh5co-content_show"> <div class="xs4 xm3 lefter">
+        <button class="button icon-navicon bg margin-bottom" data-target="#subnav"></button>
+        <ul class="nav submenu nav-navicon  margin-large-bottom" id="subnav">
+            <h2 class="left_h margin-bottom">{:mylang('product.Relatedproducts',$contraller)}</h2>
+
+            <?php
+            foreach($like_list as $l)
+            {
+            ?>
+            <li ><a href='<?php echo content_url($l['id'],$l['lang']);?>' title="{$l.title}">{$l.title}</a></li>
+          <?php
+          }
+          ?>
+
+        </ul>
+        <div class="hidden-l">
+            <h2 class="left_h margin-bottom">{:mylang('product.ProductsCategory',$contraller)}</h2>
+            <ul class="nav submenu nav-navicon  margin-big-bottom">
+
+                <?php
+                foreach($classify_list as $c)
+                {
+                ?>
+                <li><a href='<?php echo classify_url($c['id'],$c['lang']);?>' title="{$c.title}">{$c.title}</a></li>
+                <?php
+                }
+                ?>
+
+            </ul>
+            <h2 class="left_h margin-big-bottom">{:mylang('index.ContactUs',$contraller)}</h2>
+            <div class="contact-content margin-big-bottom">
+                <?php
+                        foreach($contact as $c)
+                        {
+                        ?>
+                <p> {$c.title}：{$c.description}</p>
+                <?php
+                         }
+                         ?>
+            </div>
+        </div>
+    </div>
+
+        <div class="xs8 xm9">
+            <div class="title">
+                <h2 class="text-main padding-bottom title">{$data.title}</h2>
+            </div>
+            <div class="show_content padding-large-bottom product-detail">
+                <div class="show_body">
+                    <div class="line-big">
+                        <div class="xm5 xs12 xl12">
+                            <div class="content-img">
+                                <?php
+        foreach($data['image'] as $a)
+        {
+        ?>
+                                <a href="<?php echo image_url('uploads/'.$a['name']); ?>" title="Programmable Controllers2" class="image-popup" target="_blank"><img src="<?php echo image_url('uploads/'.$a['name']); ?>" /></a>
+                                <?php
+        }
+        ?>
+
+                            </div>
+                        </div>
+                        <div class="xm7 xs12 xl12">
+                            <h1>{:mylang('product.Parameter',$contraller)}</h1>
+                            <!--
+                            <div class="p_desc">Certificate Number: 2013010913636683
+                                Certificate Status: Valid
+                                Name of Applicant: Guangzhou He 's Office Equipment Co., Ltd</div>
+                                -->
+                            <div class="add_to_inquiry margin-big-top margin-bottom">
+                                <button class="button button-big bg-main dialogs" id="add_to_inquiry" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">{:mylang('product.Quickquote',$contraller)}</button>
+                            </div>
+                            <div id="mydialog">
+                                <div class="dialog">
+                                    <div class="dialog-head"> <span class="close rotate-hover"></span><strong>{:mylang('product.Quickquote',$contraller)}</strong> </div>
+                                    <div class="dialog-body">
+                                        <form action="" enctype="multipart/form-data" method="post">
+                                            <input type="hidden" name="action" value="post" />
+
+
+                                            <div class="form-group" >
+                                                <div class="label">
+                                                    <label for="p_name"> {:mylang('product.CompanyName',$contraller)}<font color="#ff0000">*</font> : </label>
+                                                </div>
+                                                <div class="field">
+                                                    <input class="input" id="companyname" name="companyname"  value=""  type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="label">
+                                                    <label for="email"> {:mylang('product.Email',$contraller)} <font color="#ff0000">*</font> : </label>
+                                                </div>
+                                                <div class="field">
+                                                    <input class="input" id="email" name="email"  type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="label">
+                                                    <label for="name">  {:mylang('product.Name',$contraller)} : </label>
+                                                </div>
+                                                <div class="field">
+                                                    <input class="input" id="name" name="name"  type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="label">
+                                                    <label for="tel"> {:mylang('product.Tel',$contraller)}  : </label>
+                                                </div>
+                                                <div class="field">
+                                                    <input class="input" id="tel" name="tel" maxlength="12"  type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="label">
+                                                    <label for="content">  {:mylang('product.Message',$contraller)} : </label>
+                                                </div>
+                                                <div class="field">
+                                                    <textarea class="input" id="content" name="content"   type="text"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <input type="hidden" name="token" id="token" value="{$token}">
+                                            <input type="hidden" name="content_id" id="content_id" value="{$data.id}">
+                                            <div class="form-button margin-bottom">
+                                                <button class="button bg-main margin-small-right" type="button" onclick="Submit()">{:mylang('product.Submit',$contraller)}</button>
+                                                <button class="button bg-main" type="reset">{:mylang('product.Reset',$contraller)}</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+
+                                function chk_email(str){
+                                    if((str.indexOf("@")==-1)||(str.indexOf(".")==-1)){
+                                        return false;
+                                    }
+                                    return true;
+                                }
+                                function Submit(){
+
+                                    if($("#companyname").val()==""){
+                                        alert("Please enter the product name!");
+                                        $("#companyname").focus();
+                                        return false;
+                                    }
+                                    if($("#email").val()==""){
+                                        alert("Please enter contact email!");
+                                        $("#email").focus();
+                                        return false;
+                                    }
+                                    if(!chk_email($("#email").val())){
+                                        alert("The mailbox is malformed!");
+                                        $("#email").focus();
+                                        return false;
+                                    }
+
+                                    $.ajax({
+                                        url: "/ajax/Quick_quote.html",    // 提交到controller的url路径
+                                        type: "post",    // 提交方式
+                                        data: {
+                                            "companyname": $("#companyname").val(),
+                                            "email": $("#email").val(),
+                                            "name": $("#name").val(),
+                                            "tel": $("#tel").val(),
+                                            "content": $("#content").val(),
+                                            "content_id": $("#content_id").val(),
+                                            "token": $("#token").val(),
+                                        },
+                                        dataType: "json",    // 服务器端返回的数据类型
+                                        success: function (data) {    // 请求成功后的回调函数，其中的参数data为controller返回的map,也就是说,@ResponseBody将返回的map转化为JSON格式的数据，然后通过data这个参数取JSON数据中的值
+                                            if (data.code == "201") {
+                                                alert(data.data);
+                                            } else {
+
+                                                alert(data.data);
+                                                window.location.reload();
+
+                                            }
+                                        },
+                                    });
+
+
+
+                                }
+                            </script>
+                            <div class="share">
+                                <div class="addthis_sharing_toolbox"></div>
+
+                                <!-- .share --></div>
+                        </div>
+                    </div>
+                    <div class="line margin-big-top">
+                        <h2 class="left_h">Description</h2>
+                        <div class="description margin-big-top">  <?php echo htmlspecialchars_decode($data['content']);?></div>
+                    </div>
+                </div>
+                <ul class="pager padding-big-top padding-big-bottom">
+                    <li>{:mylang('product.Previous',$contraller)}：
+                        <?php
+                        if($prv)
+                        {
+                        ?>
+                        <a href='<?php echo case_url($prv['id'],$prv['lang']);?>'>{$prv.title}</a>
+                        <?php
+                        }
+                        ?>
+
+                    </li>
+                    <li>{:mylang('product.Next',$contraller)}： <?php
+                        if($next)
+                        {
+                        ?>
+                        <a href='<?php echo case_url($next['id'],$next['lang']);?>'>{$next.title}</a>
+                        <?php
+                        }
+                        ?> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content end-->
+<!--footer-->
+{include file="view/$erdai_template/public/footer.html" /}
+
+
+<!--footer-->
+</body>
+</html>

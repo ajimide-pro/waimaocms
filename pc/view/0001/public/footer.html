@@ -1,0 +1,37 @@
+<footer>
+    <div class="layout  footer-bot">
+        <div class="container text-center">
+            <div class="foot-link hidden-l">
+                <ul class="nav nav-inline nav-split">
+
+                    <?php
+                    foreach($navigation_footer as $n)
+                    {
+                     $outflag=$n['outflag']?'target="_blank"':'';
+                    ?>
+                    <li><a href='{$n.url}' <?php  echo $outflag;?>>{$n.title}</a></li>
+                    <?php
+                    }
+                    ?>
+
+                </ul>
+            </div>
+            <div class="foot-flink">{:mylang('index.LINKS',$contraller)}：
+
+                <?php
+                foreach($links_list as $n)
+                {
+                 $outflag=$n['outflag']?'target="_blank"':'';
+                ?>
+                <a href='{$n.url}' <?php  echo $outflag;?>>{$n.title}</a>
+                <?php
+                }
+                ?>
+
+
+
+                <!--link start-->&nbsp;&nbsp;<!--link end--></div>
+            <div class="Copyright">Copyright (c) 2021 {$domian} All Rights Reserved.<?php echo htmlspecialchars_decode($config['html']);?></div>
+        </div>
+    </div>
+</footer>

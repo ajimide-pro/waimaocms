@@ -1,0 +1,3 @@
+<IfModule mod_rewrite.c>
+  SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+</IfModule>

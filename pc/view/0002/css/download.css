@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+.indexBlock4 {
+  background: #f7f9fa;
+  
+}
+.indexBlock4 .indexTitle {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: .75rem;
+  color: #5a6071;
+}
+.indexBlock4 .indexTitle h3 {
+  color: #333;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 3rem;
+}
+.indexBlock4 .indexTitle .journal{
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+    display: flex;
+}
+.indexBlock4 .indexTitle .journal .info{
+ padding: 10px;   
+ font-size: 22px;
+ color: #000;
+ padding-left: 1.25rem;
+ text-align: left;
+}
+.indexBlock4 .indexTitle .journal .info .date{
+    display: block;
+    max-width: 6.875rem;
+    margin-top: 10px;
+    height: 30;
+    line-height: 30px;
+    border-radius: 25px;
+    padding: 0 15px;
+    background-color: #f5f6f7;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.indexBlock4 .indexTitle .journal .info p{
+    text-align: left;
+    font-size: 12px;
+    color: #808080;
+    line-height: 24px;
+}
+.indexBlock4 .indexTitle .tips {
+  color: #333;
+}
+.indexBlock4 .indexTitle .tips a {
+  color: #333;
+}
+.indexBlock4 .indexTitle .consult {
+  display: block;
+  width: 150px;
+  height: 42px;
+  background-color: #f84311;
+  box-shadow: 0px 10px 30px 0px rgba(248, 67, 17, 0.2);
+  border-radius: 21px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 42px;
+}
+
+.blackBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.loginWindow {
+  display: none;
+  width: 400px;
+  height: 515px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  border: solid 1px #eeeeee;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  text-align: center;
+}
+.loginWindow .content {
+  padding: 51px 35px 0;
+}
+.loginWindow .content .title {
+  font-size: 24px;
+  color: #000;
+  line-height: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(156, 156, 156, 0.2);
+  position: relative;
+}
+.loginWindow .content .title span {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #f84311;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2px;
+}
+.loginWindow .content .wechat {
+  margin-top: 37px;
+}
+.loginWindow .content .tips {
+  width: 266px;
+  text-align: center;
+  padding-left: 38px;
+  margin: 0 auto;
+  background: url(../images/loginIco.png) no-repeat left center;
+  font-size: 14px;
+  color: #666;
+  line-height: 26px;
+  margin-top: 37px;
+}
+.loginWindow .bottom {
+  margin-top: 32px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #808080;
+  background: #f0f0f0;
+}
+.loginWindow .bottom a {
+  font-size: 14px;
+  color: #f84311;
+  margin: 0 3px;
+}
+
+.downloadBanner {
+  /* background: url(../images/download/downloadBanner.jpg) no-repeat center / cover; */
+  /* height: 723px; */
+  margin-bottom: 1.875rem;
+}
+.downloadBanner .content {
+  text-align: center;
+  padding-top: 2.375rem;
+}
+.downloadBanner .content .title {
+  font-size: 1.625rem;
+  color: #333;
+}
+.downloadBanner .content .tips {
+  font-size: .75rem;
+  line-height: 32px;
+  color: #666;
+  margin-top: 21px;
+}
+.downloadBanner .content .btn {
+  font-size: .8125rem ;
+  display: block;
+  width: 80%;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #f84311;
+  box-shadow: 0px 10px 30px 0px rgba(248, 67, 17, 0.2);
+  border-radius: 25px;
+  margin-top: 1.25rem;
+}
+.downloadBanner .content .btn i {
+  font-family: bannerIco;
+  margin-right: 12px;
+}
+.downloadBanner .content .editionTimt {
+  font-size: .75rem;
+  color: #999;
+  margin-top: 1.875rem;
+}
+/* .downloadBanner .content .btnList {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.downloadBanner .content .btnList a {
+  display: block;
+  width: 104px;
+  height: 32px;
+  border: solid 1px rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 30px;
+  color: #666;
+  margin-left: 17px;
+}
+.downloadBanner .content .btnList a:first-child {
+  margin-left: 0;
+} */

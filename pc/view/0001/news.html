@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="{$contraller|strtolower}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+    <title><?php if($data['seo_title']!='') echo $data['seo_title'];else echo $data['title']  ?></title>
+    <meta name="keywords" content="{$data.keyword}" />
+    <meta name="description" content="{$data.description}" />
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/pintuer.css" />
+    <link rel="stylesheet" type="text/css" href="/view/{$erdai_template}/css/style.css" />
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/pintuer.js"></script>
+    <script type="text/javascript" src="/view/{$erdai_template}/js/jquery.caroufredsel.packed_4.js"></script>
+
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="//view/{$erdai_template}/js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- header begin-->
+{include file="view/$erdai_template/public/header.html" /}
+
+<!-- header end-->
+
+<div class="layout">
+    <div id="carousel-banner" class="slideshow">
+
+        <?php
+        foreach($ad_list as $ad)
+        {
+        ?>
+        <img src='<?php echo image_url('uploads/'.$ad['image'][0]['name']); ?>'  alt=''>
+        <?php
+        }
+        ?>
+
+    </div>
+    <script type="text/javascript">
+        $(window).bind("load resize",function(){
+            $('#carousel-banner').carouFredSel({
+                width       : '100%',
+                auto: false,
+                items: 1,
+                scroll: {
+                    fx: 'fade',
+                    duration: 2000
+                }
+            });
+        });
+    </script>
+</div>
+<!-- content begin-->
+<div class="layout">
+    <div class="container margin-big-top" id="fh5co-content_show"> <div class="xs4 xm3 lefter">
+        <button class="button icon-navicon bg margin-bottom" data-target="#subnav"></button>
+        <ul class="nav submenu nav-navicon  margin-large-bottom" id="subnav">
+            <h2 class="left_h margin-bottom">{:mylang('index.AboutUs',$contraller)}</h2>
+
+            <?php
+            foreach($like_list as $l)
+            {
+            ?>
+            <li ><a href='<?php echo newsclassify_url($l['id'],$l['lang']);  ?>'>{$l.title}</a></li>
+            <?php
+            }
+            ?>
+
+        </ul>
+        <div class="hidden-l">
+            <h2 class="left_h margin-bottom">{:mylang('product.ProductsCategory',$contraller)}</h2>
+            <ul class="nav submenu nav-navicon  margin-big-bottom">
+
+                <?php
+                foreach($classify_list as $c)
+                {
+                ?>
+                <li><a href='<?php echo classify_url($c['id'],$c['lang']);?>' title="{$c.title}">{$c.title}</a></li>
+                <?php
+                }
+                ?>
+
+            </ul>
+            <h2 class="left_h margin-big-bottom">{:mylang('index.ContactUs',$contraller)}</h2>
+            <div class="contact-content margin-big-bottom">
+                <?php
+                        foreach($contact as $c)
+                        {
+                        ?>
+                <p> {$c.title}：{$c.description}</p>
+                <?php
+                         }
+                         ?>
+            </div>
+        </div>
+    </div>
+
+        <div class="xs8 xm9">
+            <div class="title">
+                <h2 class="text-main padding-bottom title">{$classify.title}</h2>
+            </div>
+            <div class="show_content padding-large-bottom">
+                <div class="show_body detail">
+                    <h1>{$data.title}</h1>
+                    <div class="padding-sall-top padding-big-bottom text-center qhd-title">
+                        <!--
+                        <span><strong>Source:</strong>未知</span>
+                        <span><strong>Author:</strong>admin</span>
+                        -->
+                        <span><strong>{:mylang('news.Addtime',$contraller)}:</strong>{$data.time|gettime}</span>
+                        <span><strong>{:mylang('news.Click',$contraller)}:</strong><font class="countnum">{$data.click}</font></span>
+                    </div>
+                    <span id="result_box" class="short_text">
+
+                        <span class="">
+
+                             <?php echo htmlspecialchars_decode($data['content']);?>
+                        </span></span>
+
+                </div>
+
+
+                <ul class="pager padding-big-top padding-big-bottom">
+                    <li>{:mylang('product.Previous',$contraller)}：
+                        <?php
+                        if($prv)
+                        {
+                        ?>
+                        <a href='<?php echo news_url($prv['id'],$prv['lang']);?>'>{$prv.title}</a>
+                        <?php
+                        }
+                        ?>
+
+                    </li>
+                    <li>{:mylang('product.Next',$contraller)}： <?php
+                        if($next)
+                        {
+                        ?>
+                        <a href='<?php echo news_url($next['id'],$next['lang']);?>'>{$next.title}</a>
+                        <?php
+                        }
+                        ?> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content end-->
+<!--footer-->
+{include file="view/$erdai_template/public/footer.html" /}
+
+
+<!--footer-->
+</body>
+</html>

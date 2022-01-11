@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php if($data['seo_title']!='') echo $data['seo_title'];else echo $data['title']  ?></title>
+    <meta name="keywords" content="{$data.keyword}" />
+    <meta name="description" content="{$data.description}" />
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/gobal.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/new_index.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/style.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/small.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/BindingPhone.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/news_list.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/public.css">
+</head>
+
+<body>
+
+{include file="view/$erdai_template/public/header.html" /}
+<style>.loggedIn{cursor: pointer}</style>
+<div class="h82"></div>
+<div class="detailContent">
+    <div class="news_bg clear news_details">
+        <div class="news_crumbs w1200">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li>&gt;</li>
+                <li>{$data.title}</li>
+            </ul>
+        </div>
+        <div class="news_content w1200">
+            <div class="news_left left" style="width: 100%">
+                <div class="news_detailsCon">
+                    <h1>{$data.title}</h1>
+                    <div class="details_mess">
+                        <p></p>
+                        <p>阅读 {$data.click}</p>
+                    </div>
+                    <!-- 文章内容 -->
+                    <div class="news_deitailsTxt">
+                        <div class="model model_agreement">
+                            <?php echo htmlspecialchars_decode($data['content']);?>
+                        </div>
+                    </div>
+                    <!-- 文章内容 -->
+                    <!-- 分页 -->
+                    <div class="news_detailsPage clear">
+                        <ul>
+                            <li class="pre">{:mylang('product.Previous',$contraller)}： <?php
+                        if($prv)
+                        {
+                        ?>
+                                <a href='<?php echo news_url($prv['id'],$prv['lang']);?>'>{$prv.title}</a>
+                                <?php
+                        }
+                        ?></li>
+                            <li class="pre">{:mylang('product.Next',$contraller)}：<?php
+                        if($next)
+                        {
+                        ?>
+                                <a href='<?php echo news_url($next['id'],$next['lang']);?>'>{$next.title}</a>
+                                <?php
+                        }
+                        ?> </li>
+                        </ul>
+                    </div>
+                    <!-- 分页 -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/view/{$erdai_template}/js/jquery-1.11.3.min.js"></script>
+
+{include file="view/$erdai_template/public/footer.html" /}
+
+<!-- 登录注册 -->
+<div class="blackBackground"></div>
+<div class="loginWindow">
+    <div class="close"><img src="/static/home/images/close.png" alt="close"></div>
+    <div class="content">
+        <div class="title">微信扫码登录/注册<span></span></div>
+        <div class="wechat">
+            <img src="/static/home/images/publicWechat.png" alt="" id="qrcode" width="223px" height="223px">
+        </div>
+        <div class="tips">
+            扫码关注"HuoCMS"公众号进行登录
+        </div>
+    </div>
+    <div class="bottom">
+        登录即同意<a href="/article/8.html" target="_blank">用户协议</a>和<a href="/article/7.html" target="_blank">隐私政策</a>
+    </div>
+</div>
+
+<script>
+    var socket = io(window.location.host + ':6020');
+
+    function checkLogin() {
+        $.getJSON('index/isLogin', function (res) {
+            if (res.code == 0) {
+                $('.blackBackground').fadeOut();
+                $('.loginWindow').fadeOut();
+
+                $('#avatar').attr('src', res.data.user_avatar);
+                $('.name').text(res.data.user_name);
+                $('.loggedIn').show();
+                $('.header .menu').hide();
+            }
+        });
+    }
+
+    socket.on('connect', function () {
+        console.log('init success');
+
+        $('.login').on('click', function () {
+
+            $.getJSON('wechat/getTicket', function (res) {
+                $("#qrcode").attr('src', res.data.url);
+                $('.blackBackground').fadeIn();
+                $('.loginWindow').fadeIn();
+
+                socket.emit('login', res.data.uid);
+            });
+        });
+
+        socket.on('login_verified', function(msg) {
+            $.get('index/login',{uid: msg},function(res) {
+                if (res.code == 0) {
+
+                    let redirect = localStorage.getItem('redirect_url');
+                    localStorage.removeItem('redirect_url');
+                    if (redirect) {
+                        window.location.href = redirect;
+                    } else {
+                        window.location.reload();
+                    }
+                } else {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.msg(res.msg);
+                    });
+                }
+            })
+        });
+    });
+
+    $(function() {
+        let nowPath = window.location.pathname;
+        $('.nav li').each(function() {
+            if ($(this).find('a').attr('href') == nowPath) {
+                $(this).addClass('active').siblings().removeClass('active');
+
+            }
+        });
+    })
+
+    //checkLogin();
+</script>
+<script>
+    $('.header').addClass('position');
+    $('.header .w1200 .right .nav li').hover(function () {
+        $(this).children('.list').stop().fadeIn()
+    }, function () {
+        $(this).children('.list').stop().fadeOut()
+    });
+
+    $('.close').click(function () {
+        $('.blackBackground').fadeOut();
+        $('.loginWindow').fadeOut();
+        $('.BindingPhone_outer').fadeOut()
+    });
+
+    $('.loggedIn').hover(function(){
+        $(this).children('.content').children('.list').stop().fadeIn()
+    },function(){
+        $(this).children('.content').children('.list').stop().fadeOut()
+    })
+</script>
+</body>
+
+</html>

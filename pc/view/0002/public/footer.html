@@ -1,0 +1,69 @@
+
+<div class="indexBlock4">
+    <div class="index4Title ">
+        <h3>全方位服务保障</h3>
+        <div class="tips">专业服务团队，答疑解惑专业指导，服务热线：<a href="tel:400-855-0210">15074867188</a></div>
+        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=nBfhkT4q38o-oNvLKIQP4diAdAyE7UY3&jump_from=webapi" class="consult">立即咨询</a>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w1200">
+        <div class="footer_in">
+
+            <div class="footer_in_info">
+                <img src="{$config.logo|image_url}" alt="{$config.title}" />
+
+                <?php
+                        foreach($contact as $c)
+                        {
+                        ?>
+                <p>{$c.title}：<span>{$c.description}</span></p>
+                <?php
+                    }
+                    ?>
+            </div>
+
+            <div class="footer_in_qq">
+                <h4>添加QQ群</h4>
+                <ul>
+                    <li>
+                        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=nBfhkT4q38o-oNvLKIQP4diAdAyE7UY3&jump_from=webapi">
+                            <img src="/view/{$erdai_template}/images/new_index/qq.png" alt="">
+                            <span>573029169</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer_in_wechat">
+                <div class="footer_in_wechat_box">
+                    <div class="footer_in_wechat_img">
+                        <img src="/view/{$erdai_template}/images/new_index/bottom_img03.jpg" alt="">
+                    </div>
+                    <h4>长按或截图保存，关注【外贸人CMS】微信公众号</h4>
+                </div>
+            </div>
+        </div>
+
+        <ul class="footerLink">
+            <span>{:mylang('index.LINKS',$contraller)}: </span>
+            <?php
+                foreach($links_list as $n)
+                {
+                 $outflag=$n['outflag']?'target="_blank"':'';
+                ?>
+            <li><a href='{$n.url}' <?php  echo $outflag;?>>{$n.title}</a></li>
+            <?php
+                }
+                ?>
+        </ul>
+
+        <!-- 备案 -->
+        <div class="beian">
+            <div class="text">Copyright (c) 2021 {$domian} All Rights Reserved.<?php echo htmlspecialchars_decode($config['html']);?>. <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+                <br> <?php echo $config['icpnumber'];?></a> </div>
+            <!-- <div class="text">Designed by 派流</div> -->
+        </div>
+    </div>
+</div>

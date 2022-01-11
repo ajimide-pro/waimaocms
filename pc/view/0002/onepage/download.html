@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/download.css">
+
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/BindingPhone.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}/css/public.css">
+    <script src="/view/{$erdai_template}/js/jquery-1.11.3.min.js"></script>
+    <script src="/view/{$erdai_template}/js/public.js"></script>
+    <title>下载</title>
+</head>
+<body>
+{include file="view/$erdai_template/public/header.html" /}
+    <div class="downloadBanner">
+        <div class="content">
+            <div class="title">
+                免费下载 外贸人CMS
+            </div>
+            <div class="tips">
+                运行环境: Nginx/IIS/Apache PHP7.2 + MySQL5.7+
+            </div>
+            <a class="btn" href="https://gitee.com/lvzan/foreign-trade-cms"><i>&#xec1d;</i>免费下载使用外贸人CMS</a>
+            <div class="editionTimt">
+                当前版本：<i class="edition">V1.0</i> | 更新于 <i class="time">2022-01-03</i>
+            </div>
+            <!-- <div class="btnList">
+                <a href="javascript:;">网上装机</a>
+                <a href="javascript:;">本机安装</a>
+                <a href="javascript:;">操作指南</a>
+                <a href="javascript:;">更新日志</a>
+            </div> -->
+        </div>
+    </div>
+    <div class="indexBlock4">
+        <div class="indexTitle">
+            <h3>外贸人CMS升级日志</h3>
+            <div>一直努力 为了给您呈献一个更好的产品</div>
+            <div class="journal">
+
+                <div class="info">
+                    <h5>2.0升级日志</h5>
+                    <span class="date">2021-11-03</span>
+                    <p>新增：</p>
+                    <p>v1.0全新发布：</p>
+                    <p>外贸人CMS全新升级，管理后台采用前后端分离模式。开发框架升级为thinkphp6.0+vue2.6</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{include file="view/$erdai_template/public/footer.html" /}
+    <!-- 登录注册 -->
+    <div class="blackBackground"></div>
+    <div class="loginWindow">
+        <div class="close"><img src="../images/close.png" alt="close"></div>
+        <div class="content">
+            <div class="title">微信扫码登录/注册<span></span></div>
+            <div class="wechat">
+                <img src="../images/publicWechat.png" alt="">
+            </div>
+            <div class="tips">
+                扫码关注"外贸人CMS"公众号进行登录
+            </div>
+        </div>
+        <div class="bottom">
+            登录即同意<a href="javascript:">用户协议</a>和<a href="javascript:;">隐私政策</a>
+        </div>
+    </div>
+    <!-- 绑定手机弹窗 -->
+    <div class="BindingPhone_outer">
+        <div class="BindingPhone">
+            <div class="close"><img src="../images/close.png" alt="close"></div>
+            <div class="BindingPhone_title">
+                <h3>绑定手机号</h3>
+            </div>
+            <div class="BindingPhone_form">
+                <h4>为保障外贸人CMS账号的正常使用，请尽快完成手机号验证，感谢您的理解和支持!</h4>
+                <div class="BindingPhone_form_in">
+                    <div class="BindingPhone_form_input">
+                        <input type="text" name="" id="">
+                    </div>
+
+                    <div class="BindingPhone_form_input BindingPhone_form_code">
+                        <input type="text" name="" id="">
+                        <button>获取验证码</button>
+                    </div>
+                </div>
+                <div class="BindingPhone_Submit">
+                    <button>确定</button>
+                </div>
+            </div>
+            <div class="BindingPhone_agreement">
+                <input type="checkbox" checked="checked"/>
+                <span>登录即同意&nbsp;<a href="">用户协议</a>&nbsp;和&nbsp;<a href="">隐私协议</a></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.hambur').click(function () {
+            $('.hambur').toggleClass('open');
+            $('.hammenu').toggleClass('open')
+        });
+
+        $('.header').addClass('position');
+        $('.header .w1200 .right .nav li').hover(function(){
+            $(this).children('.list').stop().fadeIn()
+        },function(){
+            $(this).children('.list').stop().fadeOut()
+        });
+        $('.header .w1200 .right .menu .login').click(function(){
+            $('.blackBackground').fadeIn();
+            $('.loginWindow').fadeIn()
+        });
+        $('.close').click(function(){
+            $('.blackBackground').fadeOut();
+            $('.loginWindow').fadeOut();
+            $('.BindingPhone_outer').fadeOut()
+        })
+    </script>
+</body>
+</html>

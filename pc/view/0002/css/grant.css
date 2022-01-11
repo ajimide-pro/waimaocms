@@ -1,0 +1,365 @@
+/* 套餐方案 */
+.footer {
+    background: #003049;
+    width: 100%;
+    height: 453px;
+    border-top: 3px solid #f84311;
+}
+/* 全方位服务保障 */
+.indexBlock4 {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../images/new_index/bottom_img01.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.indexBlock4 .index4Title h3 {
+    font-size: 2.25rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: MicrosoftYaHei-Bold;
+}
+.indexBlock4 .index4Title .tips {
+    font-size: .875rem;
+    font-family: MicrosoftYaHei;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+.indexBlock4 .index4Title .tips a {
+    color: rgba(255, 255, 255, 0.9);
+}
+.indexBlock4 .index4Title .consult {
+    width: 164px;
+    height: 46px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    margin-top: 30px;
+    color: #f84311;
+    line-height: 46px;
+    text-align: center;
+    border-radius: 23px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 30px 0px rgba(248, 67, 17, 0.2);
+}
+
+.grantBanner {
+    background: url(../../images/grant/grantBanner.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 1.25rem;
+}
+.grantBanner .title {
+    font-size: 1.875rem;
+    line-height: 42px;
+    color: #333;
+    margin-bottom: .375rem;
+}
+.grantBanner .tips {
+    font-size: 1rem;
+    color: #666;
+}
+.grantBlock .w1200 {
+    display: flex;
+    justify-content: space-between;
+}
+.grantBlock .w1200 .list {
+  //  width: 95%;
+    width: calc((100% - 60px) / 3);
+    margin: 0 auto;
+    padding-bottom: 61px;
+    margin-bottom: 1.25rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.grantBlock .w1200 .list .img {
+    background: url(../../images/grant/grantBlockImg.png) no-repeat center / cover;
+    height: 230px;
+    text-align: center;
+    padding-top: 42px;
+}
+
+.grantBlock .w1200 .list .img .imgTit {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 9px;
+}
+
+.grantBlock .w1200 .list .img .imgTips {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.grantBlock .w1200 .list .img .money {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.grantBlock .w1200 .list .img .money span {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 48px;
+    margin-right: 2px;
+}
+
+.grantBlock .w1200 .list .item {
+    margin-top: 56px;
+    padding-bottom: 1px;
+}
+
+.grantBlock .w1200 .list:nth-child(3) .item {
+    height: 484px;
+}
+
+.grantBlock .w1200 .list .item ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 27px;
+}
+
+.grantBlock .w1200 .list .item ul li {
+    width: calc(50% - 8px);
+    padding-left: 32px;
+    margin-left: 10px;
+    background: url(../../images/grant/grantBlockImg3.png) no-repeat left;
+    line-height: 22px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 2.1875rem;
+}
+
+.grantBlock .w1200 .list .item ul li.none {
+    background-image: url(../../images/grant/grantBlockImg4.png);
+}
+
+.grantBlock .w1200 .list .item ul li:nth-child(2n + 2) {
+    width: 120px;
+}
+
+.grantBlock .w1200 .list .btn {
+    display: block;
+    width: 150px;
+    height: 42px;
+    border-radius: 21px;
+    margin: 0 auto;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.grantBlock .w1200 .list:first-child .btn {
+    background-color: #2ebf96;
+    box-shadow: 0px 10px 30px 0px rgba(46, 191, 150, 0.2);
+}
+
+.grantBlock .w1200 .list:nth-child(2) .btn {
+    background-color: #7025ed;
+    box-shadow: 0px 10px 30px 0px rgba(20, 64, 134, 0.2);
+}
+
+.grantBlock .w1200 .list:last-child .btn {
+    background-color: #0060ff;
+    box-shadow: 0px 10px 30px 0px rgba(70, 42, 169, 0.2);
+}
+
+.grantBlock .w1200 .list:nth-child(2) .img {
+    background: url(../../images/grant/grantBlockImg2.png) no-repeat center / cover;
+}
+
+.grantBlock .w1200 .list:nth-child(3) .img {
+    background: url(../../images/grant/grantBlockImg6.png) no-repeat center / cover;
+}
+
+.grantBlock .w1200 .list.charge .img .money {
+    font-size: 18px;
+    position: relative;
+}
+
+.grantBlock .w1200 .list.charge .img .money i {
+    position: relative;
+    top: -18px;
+    font-size: 24px;
+}
+
+/* 商业授权原来价格 */
+.grantBlock .w1200 .list:nth-child(2) .img .money {
+    margin-top: 0px;
+}
+
+.grantBlock .w1200 .list:nth-child(2) .img .grantBlock_original_price {
+    position: relative;
+}
+
+.grantBlock .w1200 .list:nth-child(2) .img .grantBlock_original_price img {
+    width: 200px;
+    height: 49px;
+    margin: 0 auto;
+}
+
+.grantBlock .w1200 .list:nth-child(2) .img .grantBlock_original_price p {
+    position: absolute;
+    color: #ffff;
+    font-size: .875rem;
+    line-height: 26px;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    font-weight: 900;
+    transform: translate(-50%, -70%);
+    font-family: MicrosoftYaHei-Bold;
+}
+
+/* 常见问题 */
+.grantBlock2 {
+    margin-top: 2.5rem;
+  }
+  .grantBlock2 .grantBlockTitle {
+    text-align: center;
+    font-size: 2.625rem;
+    color: #333;
+  }
+  .grantBlock2 .w1200 {
+    padding-bottom: 3.125rem;
+  }
+.grantBlock2 .w1200 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 35px;
+    padding-bottom: 100px;
+}
+  .grantBlock2 .w1200 .list {
+     // width: 95%;
+      width: calc((100% - 80px) / 2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2.0625rem;
+    margin: 0 auto;
+  }
+  .grantBlock2 .w1200 .list:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .grantBlock2 .w1200 .list .time {
+    width: calc(100 / 360 * 100%);
+  }
+  .grantBlock2 .w1200 .list .time p {
+    font-size: 1.625rem;
+    color: #333;
+    font-family: 'barlow-m';
+    line-height: 2.25rem;
+  }
+  .grantBlock2 .w1200 .list .time span {
+    display: block;
+    font-size: 1rem;
+    color: #999;
+    font-family: 'barlow-m';
+    padding-left: 28px;
+    line-height: 25px;
+    margin-top: .75rem;
+  }
+  .grantBlock2 .w1200 .list .content {
+    width: calc(460 / 560 * 100%);
+  }
+  .grantBlock2 .w1200 .list .content a {
+    display: block;
+  }
+  .grantBlock2 .w1200 .list .content a p {
+    font-size: 1.125rem;
+    color: #333;
+    line-height: 2.25rem;
+  }
+  .grantBlock2 .w1200 .list .content a span {
+    font-size: .8125rem;
+    color: #808080;
+    line-height: 25px;
+    margin-top: 12px;
+    display: block;
+  }
+     /* 登陆注册 */
+.blackBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+  .loginWindow {
+    display: none;
+    width: 400px;
+    height: 515px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    text-align: center;
+  }
+  .loginWindow .content {
+    padding: 51px 35px 0;
+  }
+  .loginWindow .content .title {
+    font-size: 24px;
+    color: #000;
+    line-height: 24px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(156, 156, 156, 0.2);
+    position: relative;
+  }
+  .loginWindow .content .title span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #f84311;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2px;
+  }
+  .loginWindow .content .wechat {
+    margin-top: 37px;
+  }
+  .loginWindow .content .tips {
+    width: 266px;
+    text-align: center;
+    padding-left: 38px;
+    margin: 0 auto;
+    background: url(../../images/loginIco.png) no-repeat left center;
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+    margin-top: 37px;
+  }
+  .loginWindow .bottom {
+    margin-top: 32px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #808080;
+    background: #f0f0f0;
+  }
+  .loginWindow .bottom a {
+    font-size: 14px;
+    color: #f84311;
+    margin: 0 3px;
+  }

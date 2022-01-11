@@ -1,0 +1,33 @@
+
+/************** 效果 **************/
+/* 过度效果 */
+.transition2{transition:all .2s ease-in-out;}
+.transition3{transition:all .3s ease-in-out;}
+.transition4{transition:all .4s ease-in-out;}
+.transition5{transition:all .5s ease-in-out;}
+
+/* 鼠标经过向上移动 */
+.translateY5:hover{transform:translateY(-5px);}
+.translateY10:hover{transform:translateY(-10px);}
+.translateY15:hover{transform:translateY(-15px);}
+
+/* 阴影投影 */
+.boxshadow{box-shadow:0 0 25px 0 rgba(0,0,0,0);}
+.boxshadow:hover{box-shadow:0 0 25px 0 rgba(0,0,0,.3);}
+
+/* 放大 */
+.scale{overflow:hidden;}
+.scale:hover img{transform:scale(1.05);}
+
+/* 选项卡切换效果 */
+.tab_show.current{animation:tabShow .2s 1 0s linear forwards; -webkit-animation:tabShow .2s 1 0s linear forwards;}
+@-webkit-keyframes tabShow{
+	0%{transform:translateY(30px); opacity:0;}
+	50%{transform:translateY(15px); opacity:.5;}
+	100%{transform:translateY(0); opacity:1;}
+}
+@keyframes tabShow{
+	0%{transform:translateY(30px); opacity:0;}
+	50%{transform:translateY(15px); opacity:.5;}
+	100%{transform:translateY(0); opacity:1;}
+}

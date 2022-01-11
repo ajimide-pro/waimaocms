@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/download.css">
+
+    <link rel="stylesheet" href="css/BindingPhone.css">
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/public.js"></script>
+    <title>下载</title>
+</head>
+<body>
+    <div class="header">
+        <div class="w1200">
+            <div class="logo left">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="LOGO" />
+                </a>
+            </div>
+            <div class="right">
+                <div class="loggedIn">
+                    <div class="content clear">
+                        <div class="img"><img src="images/user_img.jpg" alt=""></div>
+                        <div class="name">落叶</div>
+                        <span><img src="images/down.png"></span>
+                        <div class="list">
+                            <div class="ico"><img src="images/headerSelectIco.png" alt=""></div>
+                            <!-- <a href="javascript:;">我的信息</a> -->
+                            <a href="javascript:">授权证书</a>
+                            <!-- <a href="javascript:;">登录记录</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <img class="login" src="./images/touxiang.png" alt="">
+                    <li class="hamnav">
+                        <span class="hambur"></span>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="hammenu">
+            <li class="active"><a href="index.html">首页<span></span></a></li>
+            <li><a href="download.html">下载<span></span></a></li>
+            <li><a href="onepage/grant.html">购买<span></span></a></li>
+            <li><a href="authorization.html">授权查询<span></span></a></li>
+            <li><a href="javascript:">手册<span></span></a></li>
+        </div>
+    </div>
+    <div class="downloadBanner">
+        <div class="content">
+            <div class="title">
+                免费下载 外贸人CMS
+            </div>
+            <div class="tips">
+                运行环境: Nginx/IIS/Apache PHP7.2 + MySQL5.7+
+            </div>
+            <a class="btn" href="javascript:"><i>&#xec1d;</i>免费下载使用外贸人CMS</a>
+            <div class="editionTimt">
+                当前版本：<i class="edition">V2.0_20211012</i> | 更新于 <i class="time">2021-10-12</i>
+            </div>
+            <!-- <div class="btnList">
+                <a href="javascript:;">网上装机</a>
+                <a href="javascript:;">本机安装</a>
+                <a href="javascript:;">操作指南</a>
+                <a href="javascript:;">更新日志</a>
+            </div> -->
+        </div>
+    </div>
+    <div class="indexBlock4">
+        <div class="indexTitle">
+            <h3>外贸人CMS升级日志</h3>
+            <div>一直努力 为了给您呈献一个更好的产品</div>
+            <div class="journal">
+
+                <div class="info">
+                    <h5>2.0升级日志</h5>
+                    <span class="date">2021-11-03</span>
+                    <p>新增：</p>
+                    <p>v2.0全新发布：</p>
+                    <p>外贸人CMS全新升级，管理后台采用前后端分离模式。开发框架升级为thinkphp6.0+vue2.6</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="w1200">
+            <div class="footer_in">
+                <div class="footer_in_wechat">
+                    <div class="footer_in_wechat_box">
+                        <div class="footer_in_wechat_img">
+                            <img src="images/new_index/bottom_img03.jpg" alt="">
+                        </div>
+                        <h4>长按或截图保存，关注【外贸人CMS】微信公众号</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- 备案 -->
+            <div class="beian">
+                <div class="text">Copyright © 2021 外贸人CMS All Rights Reserved. <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+                   <br> 沪ICP备2021024265号-3</a> </div>
+                <!-- <div class="text">Designed by 派流</div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 登录注册 -->
+    <div class="blackBackground"></div>
+    <div class="loginWindow">
+        <div class="close"><img src="images/close.png" alt="close"></div>
+        <div class="content">
+            <div class="title">微信扫码登录/注册<span></span></div>
+            <div class="wechat">
+                <img src="images/publicWechat.png" alt="">
+            </div>
+            <div class="tips">
+                扫码关注"外贸人CMS"公众号进行登录
+            </div>
+        </div>
+        <div class="bottom">
+            登录即同意<a href="javascript:;">用户协议</a>和<a href="javascript:">隐私政策</a>
+        </div>
+    </div>
+    <!-- 绑定手机弹窗 -->
+    <div class="BindingPhone_outer">
+        <div class="BindingPhone">
+            <div class="close"><img src="images/close.png" alt="close"></div>
+            <div class="BindingPhone_title">
+                <h3>绑定手机号</h3>
+            </div>
+            <div class="BindingPhone_form">
+                <h4>为保障外贸人CMS账号的正常使用，请尽快完成手机号验证，感谢您的理解和支持!</h4>
+                <div class="BindingPhone_form_in">
+                    <div class="BindingPhone_form_input">
+                        <input type="text" name="" id="">
+                    </div>
+
+                    <div class="BindingPhone_form_input BindingPhone_form_code">
+                        <input type="text" name="" id="">
+                        <button>获取验证码</button>
+                    </div>
+                </div>
+                <div class="BindingPhone_Submit">
+                    <button>确定</button>
+                </div>
+            </div>
+            <div class="BindingPhone_agreement">
+                <input type="checkbox" checked="checked"/>
+                <span>登录即同意&nbsp;<a href="">用户协议</a>&nbsp;和&nbsp;<a href="">隐私协议</a></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.hambur').click(function () {
+            $('.hambur').toggleClass('open');
+            $('.hammenu').toggleClass('open')
+        });
+
+        $('.header').addClass('position');
+        $('.header .w1200 .right .nav li').hover(function(){
+            $(this).children('.list').stop().fadeIn()
+        },function(){
+            $(this).children('.list').stop().fadeOut()
+        });
+        $('.header .w1200 .right .menu .login').click(function(){
+            $('.blackBackground').fadeIn();
+            $('.loginWindow').fadeIn()
+        });
+        $('.close').click(function(){
+            $('.blackBackground').fadeOut();
+            $('.loginWindow').fadeOut();
+            $('.BindingPhone_outer').fadeOut()
+        })
+    </script>
+</body>
+</html>

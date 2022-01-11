@@ -1,0 +1,168 @@
+<!-- header begin-->
+<script src="/view/{$erdai_template}/js/jquery.cookie.js"></script>
+<header id="fh5co-header">
+    <div class="layout">
+        <div class="container">
+            <div class="xm4 xs4 xl12 logo"> <a href="/" title="{$config.title}"><img  src="{$config.logo|image_url}" /></a> </div>
+            <div class="xm8  xs8 xl12 search-top nav-navicon" id="form-search">
+                <div class="float-right">
+                    <form name="serch-form" action="/{$contraller}/search.html" method="post" class="serch-form">
+                        <input name="key" type="text" class="inputkey" id="search-keyword" style="color:#ccc" placeholder="{:mylang('index.INTERKEYWORD',$contraller)}" onfocus="if(this.value=='Enter Keyword
+'){this.value=';';}" onblur="if(this.value==''){this.value='Enter Keyword;
+';}" />
+                        <input type="submit" name="search" class="go" value="{:mylang('index.OK',$contraller)}" />
+                    </form>
+
+                    <!-- lang -->
+                    <div class="translate_wrapper">
+                        <div class="current_lang">
+                            <div class="lang">
+                                <?php
+foreach($lang_list as $l)
+{
+
+   if(strtoupper($contraller)!=strtoupper($l['lang'])) continue;
+?>
+                                <img src="{$l.litpic|image_url}">
+                                <span class="lang-txt">{$l.title}</span>
+                                <span class="fa fa-chevron-down chevron"></span>
+                                <?php
+ }
+ ?>
+                            </div>
+                        </div>
+                        <div class="more_lang">
+<?php
+foreach($lang_list as $l)
+{
+   if($l['index']==1) $url=$http_type.$domian;
+   else $url='/'.$l['lang'].'/';
+
+   if(strtoupper($contraller)==strtoupper($l['lang'])) continue;
+?>
+                            <a href="javascript:void(0)" data-value="{$url}" data-mask="{$l.lang}" class="change_lang">
+                            <div class="lang" data-value='cn'>
+                                <img src="{$l.litpic|image_url}">
+                                <span class="lang-txt">{$l.title}</span>
+                            </div>
+                            </a>
+ <?php
+ }
+ ?>
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- lang -->
+
+                    <!--
+                    <a href="/cart/" class="default_shopping_cart default_shopping_cart_style default_shopping_cart_down">     <i class="iconfontt iconn-shoppingcart1"></i>
+                        <span class="text_0"></span>
+                        <span class="cart_count">1</span>
+                        <span class="text_1">Itemes</span>
+                        <span class="cart_count_price">615.78</span>
+                        <div class="cart_note themes_dropdown"></div>
+                    </a>
+                    -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout hidden-s hidden-m hidden-b nav_bg">
+        <div class="container"> <span class="text-white">{:mylang('index.ToggleNavigation',$contraller)}</span>
+            <button class="button  icon-navicon" data-target="#nav-main1"> </button>
+            <button class="button icon-search" data-target="#form-search"> </button>
+        </div>
+    </div>
+    <div class="layout fixed header-nav bg-main bg-inverse">
+        <div class="container">
+            <ul class="nav nav-menu nav-inline  nav-navicon" id="nav-main1">
+
+                <?php
+
+                foreach($navigation as $n)
+                {
+                      $outflag=$n['outflag']?'target="_blank"':'';
+                ?>
+                <?php if(!isset($n['children'])){  ?>
+                <li class="current"><a class="first-level" href='{$n.url}' <?php  echo $outflag;?>>{$n.title}</a></li>
+                <?php }else{  ?>
+
+                <li class="current">
+                    <a class="first-level" href='{$n.url}'>{$n.title}<span class="downward"></span></a>
+                    <ul class="drop-menu">
+                          <?php  foreach($n['children'] as $c){
+$outflag=$c['outflag']?'target="_blank"':'';
+                               ?>
+                        <li><a href="{$c.url}"  <?php  echo $outflag;?>>{$c.title}</a></li>
+                          <?php } ?>
+
+
+                    </ul>
+                </li>
+                <?php
+                }
+                ?>
+             <?php
+             }
+             ?>
+
+
+            </ul>
+        </div>
+    </div>
+</header>
+<script>
+    $(document).ready(function(){
+
+
+
+        $(document).click( function(e) {
+            $('.translate_wrapper, .more_lang').removeClass('active');
+        });
+
+        $('.translate_wrapper .current_lang').click(function(e){
+            e.stopPropagation();
+            $(this).parent().toggleClass('active');
+
+            setTimeout(function(){
+                $('.more_lang').toggleClass('active');
+            }, 5);
+        });
+
+        $(".change_lang").click( function(e) {
+            //语言切换
+            var lang=$(this).attr('data-mask');
+            $.cookie('lang', lang, { expires: 7, path: '/' });
+            if(lang=='zh') window.location.href="{$http_type}{$domian}";
+            else  window.location.href="{$http_type}{$domian}/"+lang+'/';
+        });
+        /*TRANSLATE*/
+
+
+        $('.more_lang .lang').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.more_lang').removeClass('active');
+
+            var img = $(this).find('img').attr('src');
+            var lang = $(this).attr('data-value');
+            var tnum = lang;
+
+
+            $('.current_lang .lang-txt').text(lang);
+            $('.current_lang img').attr('src', img);
+
+            if(lang == 'ar'){
+                $('body').attr('dir', 'rtl');
+            }else{
+                $('body').attr('dir', 'ltr');
+            }
+
+        });
+    });
+</script>
+
+<!-- header end-->

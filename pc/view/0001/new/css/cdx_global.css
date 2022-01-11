@@ -1,0 +1,11 @@
+
+.win_alert .win_btns .btn:hover{background: #1192fa;}
+.win_alert .win_btns .btn{color: #1192fa;}
+.win_alert .win_btns .btn_sure{color: #999;}
+.new_win_alert .win_btns .btn_sure{background: #1192fa; border:1px solid #1192fa;}
+
+.icon_success_status{background-image:url(../themes/default/images/cart/cdx/icon_success_status.png);}
+
+
+body .btn-success{background-color:#1192fa; border-color:#1192fa;}
+body .daterangepicker td.active, body .daterangepicker td.active:hover{background-color:#1192fa; border-color:#1192fa;}

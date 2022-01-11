@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/view/{$erdai_template}//css/public.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}//css/authorization.css">
+    <link rel="stylesheet" href="/view/{$erdai_template}//css/BindingPhone.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <title><?php if($data['seo_title']!='') echo $data['seo_title'];else echo $data['title']  ?></title>
+    <meta name="keywords" content="{$data.keyword}" />
+    <meta name="description" content="{$data.description}" />
+</head>
+
+<body>
+{include file="view/$erdai_template/public/header.html" /}
+    <div class="productBlock">
+        <div class="productTitle">
+            <p>在线授权查询</p>
+            <div class="tips">快速查询您的授权情况，<br> 如有疑问，可以进官方QQ群咨询 <br> QQ群号：573029169</div>
+        </div>
+        <div class="search">
+            <input placeholder='如域名查询：erdaicms.com' type="text">
+            <a class="searchSub">查询</a>
+        </div>
+        <!-- <div class="w1200">
+            <div class="box">
+                <img src="./images/authorization/indexBlockImg.png" alt="">
+                <div class="boxText1">授权申请</div>
+                <div class="boxText2">立即授权，创建属于您自己的网站</div>
+                <a class="boxText3" href="javascript:;">立即授权 ></a>
+            </div>
+            <div class="box">
+                <img src="./images/authorization/indexBlockImg.png" alt="">
+                <div class="boxText1">授权申请</div>
+                <div class="boxText2">立即授权，创建属于您自己的网站</div>
+                <a class="boxText3" href="javascript:;">立即授权 ></a>
+            </div>
+            <div class="box">
+                <img src="./images/authorization/indexBlockImg.png" alt="">
+                <div class="boxText1">授权申请</div>
+                <div class="boxText2">立即授权，创建属于您自己的网站</div>
+                <a class="boxText3" href="javascript:;">立即授权 ></a>
+            </div>
+        </div> -->
+    </div>
+
+{include file="view/$erdai_template/public/footer.html" /}
+    <!-- 登录注册 -->
+    <div class="blackBackground"></div>
+    <div class="loginWindow">
+        <div class="close"><img src="/view/{$erdai_template}/images/close.png" alt="close"></div>
+        <div class="content">
+            <div class="title">微信扫码登录/注册<span></span></div>
+            <div class="wechat">
+                <img src="/view/{$erdai_template}/images/publicWechat.png" alt="">
+            </div>
+            <div class="tips">
+                扫码关注"外贸人CMS"公众号进行登录
+            </div>
+        </div>
+        <div class="bottom">
+            登录即同意<a href="javascript:;">用户协议</a>和<a href="javascript:">隐私政策</a>
+        </div>
+    </div>
+    <!-- 绑定手机弹窗 -->
+    <div class="BindingPhone_outer">
+        <div class="BindingPhone">
+            <div class="close"><img src="../images/close.png" alt="close"></div>
+            <div class="BindingPhone_title">
+                <h3>绑定手机号</h3>
+            </div>
+            <div class="BindingPhone_form">
+                <h4>为保障外贸人CMS账号的正常使用，请尽快完成手机号验证，感谢您的理解和支持!</h4>
+                <div class="BindingPhone_form_in">
+                    <div class="BindingPhone_form_input">
+                        <input type="text" name="" id="">
+                    </div>
+
+                    <div class="BindingPhone_form_input BindingPhone_form_code">
+                        <input type="text" name="" id="">
+                        <button>获取验证码</button>
+                    </div>
+                </div>
+                <div class="BindingPhone_Submit">
+                    <button>确定</button>
+                </div>
+            </div>
+            <div class="BindingPhone_agreement">
+                <input type="checkbox" checked="checked"/>
+                <span>登录即同意&nbsp;<a href="">用户协议</a>&nbsp;和&nbsp;<a href="">隐私协议</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- 授权信息 -->
+    <div class="userBookWindow">
+        <div class="bookWindow">
+            <div class="close"><img src="../images/close.png" alt="close"></div>
+            <div class="info">
+                <div class="url">www..com</div>
+                <div class="list">
+                    <p><span>授权累积</span>118天</p>
+                    <p><span>有限期限</span>2021-10-20 至 2022-10-19</p>
+                    <p><span>授权企业</span> </p>
+                    <p><span>授权编号</span> </p>
+                </div>
+            </div>
+            <!-- <div class="number">2021102014250238503</div> -->
+
+        </div>
+
+    </div>
+    <!-- 未授权 -->
+    <div class="userCertificateWindow">
+        <div class="close"><img src="../images/close.png" alt=""></div>
+        <div class="img">
+            <img src="../images/user/userIco.png">
+        </div>
+        <div class="title">尚未授权</div>
+        <div class="tips">该域名尚未在官网申请授权</div>
+        <!-- <a href="javascript:;" class="btn">立即查看</a> -->
+    </div>
+    <script>
+        $('.searchSub').click(function(){
+            // 判断显示 授权成功还是失败
+            $('.blackBackground').fadeIn();
+            // 成功
+            // $('.userBookWindow').fadeIn()
+            // 失败
+            $('.userCertificateWindow').fadeIn()
+        });
+        $('.header .w1200 .right .menu .login').click(function(){
+            $('.blackBackground').fadeIn();
+            $('.loginWindow').fadeIn()
+        });
+        $('.close').click(function(){
+            $('.blackBackground').fadeOut();
+            $('.loginWindow').fadeOut();
+            $('.BindingPhone_outer').fadeOut();
+            $('.userBookWindow').fadeOut();
+            $('.userCertificateWindow').fadeOut()
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="{$contraller|strtolower}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"">
+    <meta name="robots" content="noindex,nofollow" />
+    <meta lang="en" />
+    <link rel='shortcut icon' href='' />
+
+    <title>{$data.title}</title>
+    <meta name="keywords" content="{$data.keyword}" />
+    <meta name="description" content="{$data.description}" />
+    <script>
+    var lang_obj = {"web":
+            {"global":
+                    {
+                        "confirm":"Confirm"
+                    }}};
+</script>
+    <link href='/view/{$erdai_template}/new/css/font.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <link href='/view/{$erdai_template}/new/css/visual.css?v=5.0121' rel='stylesheet' type='text/css'  />
+    <link href='/view/{$erdai_template}/new/css/global.css?v=5.0121' rel='stylesheet' type='text/css'  />
+    <link href='/view/{$erdai_template}/new/css/iconfont.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <link href='/view/{$erdai_template}/new/css/global1.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <link href='/view/{$erdai_template}/new/css/user.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <link href='/view/{$erdai_template}/new/css/effect.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <link href='/view/{$erdai_template}/new/css/image.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <link href='/view/{$erdai_template}/new/css/style.css?v=5.0121' rel='stylesheet' type='text/css' rel="preload" as="style" />
+    <script type='text/javascript' src='/view/{$erdai_template}/new/js/jquery-1.7.2.min.js?v=5.0121' rel="preload" as="style"></script>
+    <script type='text/javascript' src=/view/{$erdai_template}/new/js/jquery.lazysizes.js?v=5.0121' rel="preload" as="style"></script>
+    <script type='text/javascript' src='/view/{$erdai_template}/new//js/global.js?v=5.0121' rel="preload" as="style"></script>
+    <script type='text/javascript' src='/view/{$erdai_template}/new/js/global1.js?v=5.0121' rel="preload" as="style"></script>
+    <script type='text/javascript' src='/view/{$erdai_template}/new/js/user.js?v=5.0121' rel="preload" as="style"></script>
+    <script type='text/javascript' src='/view/{$erdai_template}/new/js/main.js?v=5.0121' rel="preload" as="style"></script>
+    <link href='/view/{$erdai_template}/new//css/cdx_visual.css?v=5.0121' rel='stylesheet' type='text/css'  />
+    <link href='/view/{$erdai_template}/new//css/cdx_global.css?v=5.0121' rel='stylesheet' type='text/css'  />
+    <style type="text/css">@charset "UTF-8";
+    :root{
+        --AddtoCartColor: #000000;
+        --BuyNowColor: #1f2021;
+        --ThemesBoxTitleColor: #3a3a3a;
+        --ThemesBoxTitleFont: "Arial";
+        --ThemesBoxSubTitleColor: #5c5c5c;
+        --ThemesBoxSubTitleFont: "Arial";
+        --ThemesProductsTitleColor: #5c5c5c;
+        --ThemesProductsTitleFont: "Arial";
+        --ThemesProductsPriceColor: #000000;
+        --ThemesProductsPriceFont: "Arial";
+        --ThemesProductsDelPriceColor: #999999;
+        --ThemesProductsDelPriceFont: "Arial";
+        --ThemesTextContentColor: #333;
+        --ThemesTextContentFont: "Arial";
+        --ThemesHeaderBgColor :#ffffff;
+        --ThemesHeaderLineColor :;
+        --ThemesHeaderTextColor :#3a3a3a;
+        --ThemesHeaderIconColor :#393939;
+        --ThemesBoardColor :;
+        --ThemesBoardBgColor :;
+        --ThemesHeaderIconBgColor :;
+        --ThemesHeaderIconUserColor :;
+        --ThemesHeaderIconUserBgColor :;
+        --ThemesHeaderIconCartColor :;
+        --ThemesHeaderIconCartBgColor :;
+        --ThemesHeaderIconSearchColor :;
+        --ThemesHeaderIconSearchBgColor :;
+        --ThemesHeaderTipsColor :;
+        --ThemesHeaderInputBorderColor :#999999;
+        --ThemesHeaderInputBgColor :#ffffff;
+        --ThemesNavBgColor :;
+        --ThemesNavTextColor :#3a3a3a;
+        --ThemesNavTextHoverColor :#cca78e;
+        --ThemesFooterBgColor :#ffffff;
+        --ThemesFooterLineColor :#dcdcdc;
+        --ThemesFooterIconColor :#000000;
+        --ThemesFooterTitleColor :#3a3a3a;
+        --ThemesFooterTextColor :#5c5c5c;
+        --ThemesFooterTextHoverColor :#cca78e;
+        --ThemesCopyrightColor :;
+        --ThemesCopyrightBgColor :;
+        --ThemesFooterButtonColor :;
+        --ThemesFooterButtonHoverColor :;
+        --ThemesFooterButtonBgColor :;
+        --ThemesFooterButtonBgHoverColor :;
+        --ThemesFooterInputColor :;
+        --ThemesFooterInputBgColor :;
+        --ThemesFooterInputBorderColor :;
+        --ThemesReviewsStarColor: #333;
+    }
+    body{font-family:"AvenirNextLTPro-Regular",Arial;color: #333333;}
+    .themes_box_title{color: var(--ThemesBoxTitleColor);font-family: var(--ThemesBoxTitleFont);}
+    .themes_box_subtitle{color: var(--ThemesBoxSubTitleColor);font-family: var(--ThemesBoxSubTitleFont);}
+    .themes_products_title{color:var(--ThemesProductsTitleColor);font-family: var(--ThemesProductsTitleFont);}
+    .themes_products_price{color: var(--ThemesProductsPriceColor);font-family: var(--ThemesProductsPriceFont);}
+    .themes_products_origin_price{ color: var(--ThemesProductsDelPriceColor);font-family: var(--ThemesProductsPriceFont);}
+    .themes_text_content{ color: var(--ThemesTextContentColor);font-family: var(--ThemesTextContentFont);}
+    .themes_article_title{font-family:"AvenirNextLTPro-Regular";color: #3a3a3a;}
+    .themes_article_subtitle{font-family:"AvenirNextLTPro-Regular";color: #5c5c5c;}
+    .icon-star1.star_1:before{ color: var(--ThemesReviewsStarColor);  }
+    .review_star .half_star:after{ color: var(--ThemesReviewsStarColor); }
+
+    #header{background-color: var(--ThemesHeaderBgColor);}
+
+    .ly_pro_item .ly_pro_item_text .ly_pro_item_price .ly_pro_item_price_p.ly_price_gray{color:#333333;}
+    .ly_pro_item .ly_pro_item_tag .ly_pro_item_tag_item{border:solid 1px #666666;background-color:#ffffff;color:#666666;}
+
+
+    .default_language_currency_style dt,.default_language_currency_style dt span{color:var(--ThemesHeaderTextColor);}
+    .default_language_currency_style dt{color:var(--ThemesHeaderTextColor);}
+
+    .default_search_style .iconfont,
+    .default_account_style .iconfont,
+    .default_shopping_cart_style  .iconfont{color: var(--ThemesHeaderIconColor);}
+
+
+    /* banner */
+    #banner_edit .banner_tab a{background-color: rgba(0, 0, 0,0.5);}
+    #banner_edit .banner_tab a.on{background-color: #ffffff;width: 20px;}
+    /* banner */
+
+
+    .default_search_style .default_search_form{border-bottom:solid 1px var(--ThemesHeaderInputBorderColor);}
+    .default_search_style .default_search_form .form .text{color:var(--ThemesHeaderTextColor);background-color: var(--ThemesHeaderInputBgColor);}
+    .default_search_style .default_search_form .form .text::-webkit-input-placeholder{color:var(--ThemesHeaderTextColor);}
+    .default_search_style .default_search_form .form .text::-moz-placeholder{color:var(--ThemesHeaderTextColor);}
+    .default_search_style .default_search_form .form .text:-ms-input-placeholder{color:var(--ThemesHeaderTextColor);}
+    .default_search_style .default_search_form .form .text::-ms-input-placeholder{color:var(--ThemesHeaderTextColor);}
+    .default_search_style .default_search_form .form .text::placeholder{color:var(--ThemesHeaderTextColor);}
+    .default_nav_style li>a{color:var(--ThemesNavTextColor);}
+    .default_shopping_cart_style .cart_count_price{color:var(--ThemesHeaderTextColor);}
+    .default_foot_menu_style .menu_list dl dt{color:var(--ThemesFooterTitleColor);}
+    .default_foot_menu_style .menu_list dl dd a{color:var(--ThemesFooterTextColor);}
+    .ly_foot_share .ly_foot_share_title{color:var(--ThemesFooterTitleColor);}
+    .ly_copy{color:var(--ThemesFooterTextColor);}
+    .ly_header_menu_mb span{background-color:var(--ThemesHeaderIconColor);}
+    .ly_free_item .ly_type_img .ly_free_item_text .ly_free_item_title{color:#ffffff;}
+    .ly_free_item .ly_type_img .ly_free_item_text .ly_free_item_btn{background-color:transparent;color:#3a3a3a;border: solid 1px #ffffff;}
+    .ly_free_item .ly_type_img .ly_free_item_text .ly_free_item_btn::after{	background-color:#ffffff;}
+    .ly_email{background-color:#f4efe9;}
+    .default_newsletter_style .default_newsletter_form .text{background-color:#ffffff;color:#999999;}
+    .default_newsletter_style .default_newsletter_form .text::-webkit-input-placeholder{color:#999999;}
+    .default_newsletter_style .default_newsletter_form .text::-moz-placeholder{color:#999999;}
+    .default_newsletter_style .default_newsletter_form .text:-ms-input-placeholder{color:#999999;}
+    .default_newsletter_style .default_newsletter_form .text::-ms-input-placeholder{color:#999999;}
+    .default_newsletter_style .default_newsletter_form .text::placeholder{color:#999999;}
+
+    .default_newsletter_style .default_newsletter_form .subscribe {background-color: #eed3be;color: #3a3a3a ;}
+
+    .global_swap_chain a{color: var(--ThemesFooterTextColor);}
+
+    .follow_us_list ul li a .iconfont{color: var(--ThemesFooterIconColor);}
+
+    .ly_index_btn{background-color:#eed3be;color:#3a3a3a;}
+    .ly_index_btn::after{background-color:#222222;}
+
+    #footer{background-color: var(--ThemesFooterBgColor);}
+    @media screen and (min-width:1000px){
+        .default_nav_style li>a:hover{color:var(--ThemesNavTextHoverColor);}
+        .ly_index_btn:hover{color:#ffffff;}
+        .ly_free_item:hover .ly_type_img .ly_free_item_text .ly_free_item_btn{color:#ffffff;background-color:transparent;}
+
+    }
+    @media screen and (max-width:1000px){
+        .default_foot_menu_style .menu_list dl{border-bottom:solid 2px var(--ThemesFooterLineColor);}
+        .default_foot_menu_style .menu_list dl dt::after{background-color:var(--ThemesFooterTitleColor);}
+        .default_foot_menu_style .menu_list dl dt::before{background-color:var(--ThemesFooterTitleColor);}
+    }
+    </style><link href='/view/{$erdai_template}/new/css/cart.css?v=5.0121' rel='stylesheet' type='text/css'  />
+    <script type='text/javascript' src='/view/{$erdai_template}/new/js/cart.js?v=5.0121' ></script>
+    <script type='text/javascript' src='/view/{$erdai_template}/new//tool_tips_web.js?v=5.0121' ></script>
+    <script type='text/javascript' src='/view/{$erdai_template}/new/js/jquery.mask.min.js?v=5.0121' ></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=&currency=HKD&locale=en_US&intent=capture&integration-date=2021-04-01" data-partner-attribution-id="ueeshop_Cart"></script><script type="text/javascript">
+    $(document).ready(function(){
+        cart_obj.paypal_init();});
+</script>
+</head>
+
+<body class="lang_en">
+<style type="text/css">.FontColor,a.FontColor,a.FontColor:hover{color:#CEAC95;}
+.FontBgColor{background-color:#CEAC95;}
+.FontBorderColor{border-color:#CEAC95;}
+.FontBorderHoverColor:hover, a.FontBorderHoverColor:hover{border-color:#CEAC95!important;}
+.FontBgHoverColor:hover{background-color:#CEAC95!important;}
+.FontHoverColor:hover{color:#CEAC95!important;}
+.AddtoCartBgColor{background-color:#000000;}
+.AddtoCartBorderColor{border-color:#000000;}
+.BuyNowBgColor{background-color:#1f2021;}
+.DiscountBgColor{background-color:#FFFFFF;}
+.DiscountBorderColor{border-color:#FFFFFF;}
+</style>
+<script type="text/javascript">if(typeof $(window).webDisplay == "function"){$(window).resize(function(){$(window).webDisplay(0);});
+    $(document).ready(function(){$(window).webDisplay(0);});}var ueeshop_config = {
+    'domain':'',
+    'date':'2021/12/20 16:18:20',
+    'lang':'en',
+    'language':'en',
+    'currency':'HKD',
+    'currency_symbols':'HK$',
+    'currency_rate':'7.7520',
+    'FbAppId':'',
+    'FbPixelOpen':'0',
+    'UserId':'0',
+    'TouristsShopping':'1',
+    'PaypalENV':'sandbox',
+    'PaypalExcheckout':'',
+    'PaypalLoaclPayment':'',
+    'PaypalLang':'en_US',
+    'PaypalBusiness':'0',
+    'PaypalCreditCard':'0',
+    'PaypalLanguage':'0',
+    'tmp_dir':'/tmp/SSAJ/SSAJ827/',
+    'IsMobile':0,
+    'GooglePixelOpen':'0',
+    'BingTabOpen':'0',
+    'pintrkPixelOpen':'0',
+    'm':'cart',
+    'a':'buynow',
+};
+window.onhashchange = function(){
+    if (document.location.pathname.indexOf('/cart/complete/') != -1) {
+        window.history.replaceState(null, null, '/cart/checkout.html');
+        window.history.go(0);
+    }
+}
+</script>
+<div class="global_shopping_cart_bg"></div>
+<div class="global_shopping_cart_box"></div>
+<div id="fixed_login_popup">
+    <div id="fixed_login_box">
+        <div class="center_content">
+            <a href="javascript:" class="signin_close iconfont icon-close1"></a><!-- checkout页面 需要判断 -->
+            <form name="signin_form" class="login" method="POST">
+                <h3>Sign In</h3>
+                <div class="login_brief">Access your account & orders history.</div>
+                <div id="error_login_box" class="error_note_box">Incorrect email address or password. Please try again.<br> Make sure the Caps Lock is off before you enter password.</div>
+                <div class="row">
+                    <label for="AccountEmail">Email</label>
+                    <input name="AccountEmail" type="text" maxlength="100" format="AccountEmail" notnull />
+                </div>
+                <div class="row">
+                    <label for="AccountPassword">Password</label>
+                    <input name="AccountPassword" type="password" autocomplete="off" notnull />
+                </div>
+                <div class="flex_box">
+                    <input class="ckb" type="checkbox" id="IsStay" name="IsStay" value="1" checked="checked" />
+                    <label for="IsStay" class="protect">
+                        <i class="FontBgColor FontBorderColor"></i>
+                        Remember me					</label>
+                    <div class="forgot">Forgot your <a href="/account/forgot.html" class="forgot">password</a>?</div>
+                </div>
+                <button class="signbtn signin FontBgColor FontBorderColor" type="submit">Sign In</button>
+                <div class="new_customer">
+                    New customer ? <a href="/account/sign-up.html" class="FontColor">Start here.</a>				</div>
+                <input type="hidden" name="do_action" value="user.login" />
+                <input type="hidden" name="comeback" value="" />
+                <input type="hidden" name="jumpUrl" value="/cart/buynow.html?Data=Q0lkPTI4NA==" />
+            </form>
+        </div>
+    </div>
+    <div id="fixed_login_popup_bg"></div>
+</div>
+<script>
+    $(document).ready(function(){
+        user_obj.sign_in_init();
+    });
+</script><div id="cart_checkout_container"><script type="text/javascript">
+    var address_perfect=1;
+    var address_perfect_aid=0;
+    $(document).ready(function(){
+        cart_obj.list_init();	cart_obj.checkout_init();
+        user_obj.sign_in_init();
+    });
+    $('html').loginOrVisitors('/cart/buynow.html?Data=Q0lkPTI4NA==', 0, function(){
+        ueeshop_config['_login'] = 1;
+        return false;
+    });
+</script>
+    <style type="text/css">
+        .information_shipping .shipping:hover .icon_shipping_title, .information_shipping .current .icon_shipping_title, .information_payment .icon_shipping_title{background-color:#1f2021;}
+    </style>
+    <style>
+        .cart_header .step>a.current>b, .cart_header .step>a.step_0>b{background-color:#00a84f;border-color:#00a84f;}
+        .cart_header .step .step_0::after, .cart_header .step .step_1::before{background-color: #00a84f;}
+        .cart_header .step .success::after, .cart_header .step .success::before{background-color: #00a84f;}
+
+    </style>
+    <div class="cart_header">
+        <div class="wide">
+            <div class="cart_logo fl"><h1  ><a href="/">
+                <img src="{$config.logo|image_url}" alt="{$config.title}" /></a>
+            </h1></div>
+            <div class="step fr">
+                <a href="/cart/" class="step_0 click"><b></b>{:mylang('product.PlaceOrder',$contraller)}</a>
+                <a href="javascript:" class="step_1 current"><b></b>{:mylang('product.Pay',$contraller)}</a>
+                <a href="javascript:" class="step_2"><b></b>{:mylang('product.Completed',$contraller)}</a>
+            </div>
+        </div>
+    </div><div id="lib_cart" class="checkout_container buynow_content">
+        <div class="checkout_content">
+            <div class="checkout_error_tips hide" data-country="" data-email="Ueeshop@qq.com"></div>
+            <div class="information_box information_customer">
+                <div class="box_title">{:mylang('product.CustomerInformation',$contraller)}</div>
+                <div class="box_content">
+                    <label class="input_box">
+                        <span class="input_box_label">Email Address</span>
+                        <input type="text" class="input_box_txt elmbBlur" name="Email" value="" placeholder="Email Address" maxlength="200" />
+                    </label>
+                    <p class="error"></p>
+                    <div class="information_login">Already have an account ? <a href="javascript:" class="SignInButton btn_signin">Log in</a></div>
+                    <input type="hidden" name="jumpUrl" value="/cart/buynow.html?Data=Q0lkPTI4NA==" />
+                </div>
+            </div>
+            <div class="information_box information_address">
+                <div class="box_title">Shipping Address</div>
+                <div class="box_content">
+                    <div class="address_default item clearfix"></div>
+                    <div id="addressInfo" style="display:none;"></div>
+                    <div id="ShipAddrFrom"><div class="edit_address_box">
+                        <form action="?" method="post" class="checkout_address_form">
+                            <div class="shipping_address">
+                                <div class="rows">
+                                    <div class="form_box clean">
+                                        <div class="box">
+                                            <label class="input_box">
+                                                <span class="input_box_label">First name</span>
+                                                <input type="text" class="input_box_txt" name="FirstName" placeholder="First name" notnull />
+                                            </label>
+                                            <p class="error"></p>
+                                        </div>
+                                        <div class="box">
+                                            <label class="input_box">
+                                                <span class="input_box_label">Last name</span>
+                                                <input type="text" class="input_box_txt" name="LastName" placeholder="Last name" notnull />
+                                            </label>
+                                            <p class="error"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="input clean">
+                                        <label class="input_box">
+                                            <span class="input_box_label">Address</span>
+                                            <input type="text" class="input_box_txt" name="AddressLine1" placeholder="Address" notnull />
+                                        </label>
+                                        <p class="error"></p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="rows">
+                                    <div class="form_box clean">
+                                        <label class="input_box">
+                                            <span class="input_box_label">Zip code</span>
+                                            <input type="text" class="input_box_txt" name="ZipCode" placeholder="Zip code" notnull />
+                                        </label>
+                                        <p class="error"></p>
+                                    </div>
+                                </div>
+
+                                <div class="rows">
+                                    <div class="input clean">
+                                        <div class="box_input_group clearfix">
+
+                                            <label class="input_box">
+                                                <span class="input_box_label">Phone number</span>
+                                                <input type="text" class="input_box_txt input_group" name="PhoneNumber" placeholder="Phone number" rel="int" notnull />
+                                            </label>
+                                        </div>
+                                        <p class="error"></p>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="javascript:" class="btn_cancel btn_global sys_shadow_button" id="cancel_address" style="display:none;">Cancel</a>
+                                </div>
+                            </div>
+                            <input type="hidden" name="typeAddr" value="1" />
+                            <input type="hidden" name="edit_address_id" value="0" id="addressId" />
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="information_box information_shipping ">
+                <div class="box_title no_border">Shipping method</div>
+                <div class="box_content">
+                    <div class="shipping" data-id="0" data-tid="0">
+                        <div class="title hide">
+                            <strong> </strong>
+                            <div class="shipping_info"><span class="name"></span><span class="price"></span></div>
+                            <i class="icon_shipping_title"></i>
+                        </div>
+                        <div class="list">
+                            <ul class="shipping_method_list clearfix"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="information_box information_payment">
+                <div class="box_title">Payment method</div>
+                <div class="box_content pay_content">
+                    <div class="payment_list clearfix">
+                        <div class="payment_row" value="1" min="0" max="0" method="Paypal" data-showtype="0" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="img"><img src="/static/themes/default/images/payment/method/Paypal.png" alt="PayPal"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="1" data-num="1" data-fee="3.90" data-affix="0">
+                            <div class="ext_txt"><p>Paypal</p></div>                    	</div>
+                    </div>
+                    <div class="payment_list clearfix">
+                        <div class="payment_card">
+                            <div class="card_box">
+                                <img src="/static/themes/default/images/payment/icon_AmericanExpress.png" />
+                                <img src="/static/themes/default/images/payment/icon_Maestro.png" />
+                                <img src="/static/themes/default/images/payment/icon_Mastercard.png" />
+                                <img src="/static/themes/default/images/payment/icon_Visa.png" />
+                                <img src="/static/themes/default/images/payment/icon_Jcb.png" />
+                                <img src="/static/themes/default/images/payment/icon_Discover.png" />
+                                <img src="/static/themes/default/images/payment/icon_Dinersclub.png" />
+                            </div>
+                        </div>
+                        <div class="payment_row" value="5" min="0" max="0" method="PayEase" data-showtype="1" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="name_txt">Credit or Debit Cards</div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="5" data-num="1" data-fee="3.00" data-affix="0">
+                            <style>
+                                .creditcard_container{margin-bottom: 7px;}
+                                .creditcard_container .card_info{ line-height:30px; color:#666;}
+                                .creditcard_container .card_rows{ margin-top:17px;}
+                                .creditcard_container .card_rows .input_box{display: flex;align-items: center;}
+                                .creditcard_container .card_rows .input_box .input_box_txt{height: 22px;}
+                                .creditcard_container .card_rows .filled .input_box_label{top: 4px;margin-bottom: 0;}
+                                .creditcard_container .card_rows .filled .input_box_txt{padding-top: 22px;height: 18px;line-height: 18px;padding-bottom: 4px;}
+                                .creditcard_container .card_img{position: relative; display:inline-block; width:16px; height:16px; margin-left:10px; vertical-align:middle;line-height: 16px;color: #999999;cursor: pointer;}
+                                .creditcard_container .card_img .card_contents{display: none; position: absolute;top: 29px; right: -19px;background-color: #fff;border-radius: 4px;padding: 30px;width: max-content;z-index: 1;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}
+                                .creditcard_container .card_img .card_contents_bg{display: none;}
+                                .creditcard_container .card_img .card_contents::before{content: ''; width: 20px;height: 20px; position: absolute; right: 17px;top: -7.5px; box-shadow:4px 4px 4px rgba(0, 0, 0, 0.1);transform: rotate(-135deg);background-color: #fff;}
+                                .creditcard_container .card_img .card_contents::after{content: '';width: 50px;height: 16px;position: absolute;top: -16px;right: 0;}
+                                .creditcard_container .card_img .card_contents_close{display: none;}
+                                .creditcard_container .card_img .card_contents .card_tit{line-height: 20px;margin-bottom: 8px;font-size: 16px;color: #666;}
+                                .creditcard_container .card_img .card_contents .card_desc{display: flex;font-size: 14px;color: #333;align-items: center;margin-bottom: 25px;}
+                                .creditcard_container .card_img .card_contents .card_desc:last-child{margin-bottom: 0;}
+                                .creditcard_container .card_img .card_contents .card_desc img{max-width: 200px;margin-right: 17px;}
+                                .creditcard_container .card_img:hover .card_contents{display: block;}
+                                .creditcard_container .card_select{ height:42px; padding:11px 16px; font-size:12px; color:#444; border:1px #d9d9d9 solid; border-radius:5px; -webkit-appearance:none; appearance:none;position: relative;background-color: #fff;}
+                                .creditcard_container .box_card_select{position: relative;margin-right: 10px;}
+                                .creditcard_container .box_card_select::after{content: '\e6bd';width: 30px;line-height: 44px;text-align: center;font-size: 12px;font-family: 'iconfont';color: #919191;transform: scale(0.75);position: absolute;right: 0;}
+                                .creditcard_container #CardNo,
+                                .creditcard_container #IssuingBank{ width:280px;}
+                                .creditcard_container .card_select#orgCode{ width:314px;}
+                                .creditcard_container .card_select#CardExpireMonth,
+                                .creditcard_container .card_select#CardExpireYear{ width:150px;height: 46px;}
+                                .creditcard_container #CardSecurityCode{ width:116px;}
+                                @media(max-width:768px){
+                                    .creditcard_container .card_info{ line-height:20px;}
+                                    .creditcard_container #CardNo, .creditcard_container #IssuingBank{ width:274px;}
+                                    .creditcard_container .card_select#CardExpireMonth,
+                                    .creditcard_container .card_select#CardExpireYear{ width:130px;}
+                                    .creditcard_container #CardSecurityCode{ width:130px;}
+                                    .creditcard_container .card_select#orgCode{ width:274px;}
+                                }
+                                .creditcard_container .float_row .card_rows{ float:left;}
+                                .creditcard_container #CardNo{ width:166px; margin-right:10px;}
+                                .creditcard_container #CardSecurityCode{ width:106px;}
+                                .creditcard_container #IssuingBank{ width:150px;}
+                                .creditcard_container .box_card_select{float: left;}
+                                .creditcard_container .card_select#CardExpireMonth,
+                                .creditcard_container .card_select#CardExpireYear{ width:140px;}
+                                .creditcard_container .card_select#orgCode{ width:184px;}
+
+                                @media(max-width:1199px){
+                                    .creditcard_container .float_row .card_rows{display: flex;width: 100%;}
+                                    .creditcard_container .float_row .card_rows .input_box{display: flex;width: 100%;align-items: center;}
+                                    .creditcard_container #CardNo{width: 100%;margin-right: 0;}
+                                    .creditcard_container .card_select#CardExpireMonth, .creditcard_container .card_select#CardExpireYear{flex: 1;}
+                                    .creditcard_container .box_card_select{display: flex;flex: 1;}
+                                    .creditcard_container .box_card_select:nth-child(2){margin-right: 0;}
+                                    .creditcard_container #CardSecurityCode{flex: 1;}
+
+                                    .creditcard_container .card_img:hover .card_contents{display: none;}
+                                    .creditcard_container .card_img .card_contents{position: fixed;width: 89.3%;z-index: 10001;top: 50%;left: 50%;transform: translate(-50%, -50%);box-sizing:border-box;text-align: center;padding-top: 48px;}
+                                    .creditcard_container .card_img .card_contents .card_contents_close{display: block;width: 36px;line-height: 36px;position: absolute;top: 11px;right: 10px;font-size: 17px;color:#666666;}
+                                    .creditcard_container .card_img .card_contents .card_contents_close::before{content: '\e631';}
+                                    .creditcard_container .card_img .card_contents::before{display: none;}
+                                    .creditcard_container .card_img .card_contents_bg{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background-color: rgba(0,0,0,0.4);z-index: 10000;}
+                                    .creditcard_container .card_img .card_contents .card_tit{padding: 5px;line-height: 18px;margin: 0;font-size: 14px;}
+                                    .creditcard_container .card_img .card_contents .card_desc{flex-wrap: wrap;justify-content: center;margin-bottom: 13px;}
+                                    .creditcard_container .card_img .card_contents .card_desc:last-child{margin-bottom: 0;}
+                                    .creditcard_container .card_img .card_contents .card_desc span{width: 100%;line-height: 20px;padding: 5px;font-size: 12px;}
+                                }
+                            </style>
+                            <script>
+                                function check_creditcard_info()
+                                {
+                                    var obj=$('.creditcard_container');
+                                    var data={};
+                                    //检测卡种类
+                                    if(obj.find('#orgCode').size()){
+                                        var orgCodeValue=obj.find('#orgCode').val();
+                                        if(orgCodeValue=='') return lang_obj.products.goods.card_tips.card_type;
+                                        data.orgCode=orgCodeValue;
+                                    }
+                                    //检测卡号
+                                    var CardNoValue=obj.find('#CardNo').val();
+                                    if(CardNoValue=='' || isNaN(CardNoValue) || (CardNoValue.length!=16 && CardNoValue.length!=15)){
+                                        return lang_obj.products.goods.card_tips.card_num;
+                                    }
+                                    data.CardNo=CardNoValue;
+                                    //检测卡日期[月份]
+                                    var CardExpireMonthValue=obj.find('#CardExpireMonth').val();
+                                    if(CardExpireMonthValue==''){
+                                        return lang_obj.products.goods.card_tips.card_month;
+                                    }
+                                    data.CardExpireMonth=CardExpireMonthValue;
+                                    //检测卡日期[年份]
+                                    var CardExpireYearValue=obj.find('#CardExpireYear').val();
+                                    if(CardExpireYearValue==''){
+                                        return lang_obj.products.goods.card_year;
+                                    }
+                                    data.CardExpireYear=CardExpireYearValue;
+                                    //检测CVV
+                                    var CardSecurityCodeValue=obj.find('#CardSecurityCode').val();
+                                    if(CardSecurityCodeValue=='' || isNaN(CardSecurityCodeValue) || CardSecurityCodeValue.length!=3){
+                                        return lang_obj.products.goods.card_cvv;
+                                    }
+                                    data.CardSecurityCode=CardSecurityCodeValue;
+                                    //检测开户行
+                                    if(obj.find('#IssuingBank').size()){
+                                        var IssuingBankValue=obj.find('#IssuingBank').val();
+                                        if(IssuingBankValue=='') return lang_obj.products.goods.card_bank;
+                                        data.IssuingBank=IssuingBankValue;
+                                    }
+                                    //全部检测通过,设置记录
+                                    $.post('/?do_action=cart.set_creditcard_info', data);
+                                }
+                                $(function(){
+                                    //cvv图片显示
+                                    if ($(window).width() < 1000) {
+                                        $('.creditcard_container .card_img').click(function(){
+                                            $('.creditcard_container .card_contents').show();
+                                            $('.creditcard_container .card_contents_bg').show();
+                                            return false;
+                                        });
+                                        $('.creditcard_container .card_contents_close').click(function(){
+                                            $('.creditcard_container .card_contents').hide();
+                                            $('.creditcard_container .card_contents_bg').hide();
+                                            return false;
+                                        });
+                                    }
+                                })
+                            </script>
+                            <div class="creditcard_container">
+                                <div class="card_info">Enter your card information :</div>
+                                <div id="creditcard_form">
+                                    <div class="float_row">
+                                        <div class="clear"></div>
+                                        <div class="card_rows">
+                                            <label class="input_box">
+                                                <span class="input_box_label">Card Number</span>
+                                                <input id="CardNo" name="CardNo" type="text" class="input_box_txt" placeholder="Card Number" maxlength="16" />
+                                            </label>
+                                        </div>
+                                        <div class="card_rows">
+                                            <div class="box_card_select">
+                                                <select id="CardExpireMonth" name="CardExpireMonth" class="card_select">
+                                                    <option value="" >MM</option>
+                                                    <option value="01">1-January</option>
+                                                    <option value="02">2-February</option>
+                                                    <option value="03">3-March</option>
+                                                    <option value="04">4-April</option>
+                                                    <option value="05">5-May</option>
+                                                    <option value="06">6-June</option>
+                                                    <option value="07">7-July</option>
+                                                    <option value="08">8-August</option>
+                                                    <option value="09">9-September</option>
+                                                    <option value="10">10-October</option>
+                                                    <option value="11">11-November</option>
+                                                    <option value="12">12-December</option>
+                                                </select>
+                                            </div>
+                                            <div class="box_card_select">
+                                                <select id="CardExpireYear" name="CardExpireYear" class="card_select">
+                                                    <option value="" >YYYY</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2026">2026</option>
+                                                    <option value="2027">2027</option>
+                                                    <option value="2028">2028</option>
+                                                    <option value="2029">2029</option>
+                                                    <option value="2030">2030</option>
+                                                </select>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="card_rows">
+                                            <label class="input_box">
+                                                <span class="input_box_label">CVV2 / CSC</span>
+                                                <input id="CardSecurityCode" name="CardSecurityCode" type="password" class="input_box_txt" placeholder="CVV2 / CSC" maxlength="3" autocomplete="off" />
+                                                <div class="card_img iconfont icon-question1">
+                                                    <div class="card_contents_bg"></div>
+                                                    <div class="card_contents">
+                                                        <a href="javascript:" class="card_contents_close"></a>
+                                                        <div class="card_tit">
+                                                            For Visa/Mastercard/JCB etcs
+                                                        </div>
+                                                        <div class="card_desc">
+                                                            <img src="/static/themes/default/images/cart/sp_checkout/card_pic1.png" />
+                                                            <span>Last 3 digits on back of card</span>
+                                                        </div>
+                                                        <div class="card_tit">
+                                                            For AMEXS only
+                                                        </div>
+                                                        <div class="card_desc">
+                                                            <img src="/static/themes/default/images/cart/sp_checkout/card_pic2.png" />
+                                                            <span>4 digits on front of card</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div><div class="ext_txt"><p>PayEasy en</p></div>                    	</div>
+                    </div>
+                    <div class="payment_list clearfix">
+                        <div class="payment_row" value="7" min="0" max="0" method="WesternUnion" data-showtype="2" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="img"><img src="/static/themes/default/images/payment/method/WesternUnion.png" alt="Western Union"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="7" data-num="1" data-fee="0.00" data-affix="0">
+                            <div class="ext_txt"><table class="cartInfo" width="100%"><tbody><tr class="firstRow"><th>NAME:</th><td>LIGHT IN THE BOX LIMITED</td></tr><tr><th>ACCOUNT:</th><td>808-383277-838</td></tr><tr><th>BANK NAME:</th><td>THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED</td></tr><tr><th>SWIFT CODE:</th><td>HSBCHKHHHKH</td></tr><tr><th>BANK ADDRESS:</th><td>1 QUEEN&#39;S ROAD CENTRAL, HONG KONG</td></tr></tbody></table><p><strong>Note:</strong> <br/>
+                                1. Our international banking partner, HSBC, doesn&#39;t require an IBAN number, please use the information above for your wire transfer.<br/>
+                                2. We recommend using your local HSBC bank for the wire transfer to reduce international transaction fees.<br/>
+                                3. Customers choosing wire transfer are responsible for all local handling fees and intermediary bank handling fees.</p></div>                    	</div>
+                    </div>
+                    <div class="payment_list clearfix">
+                        <div class="payment_row" value="8" min="0" max="0" method="MoneyGram" data-showtype="2" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="img"><img src="/static/themes/default/images/payment/method/MoneyGram.png" alt="Money Gram"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="8" data-num="1" data-fee="0.00" data-affix="0">
+                            <div class="ext_txt"><p>Money Gram</p></div>                    	</div>
+                    </div>
+                    <div class="payment_list clearfix">
+                        <div class="payment_row" value="10" min="0" max="0" method="TT" data-showtype="2" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="img"><img src="/static/themes/default/images/payment/method/TT.png" alt="T/T"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="10" data-num="1" data-fee="0.00" data-affix="0">
+                            <div class="ext_txt"><p>T/T</p></div>                    	</div>
+                    </div>
+                    <div class="payment_list clearfix">
+                        <div class="payment_row" value="11" min="0" max="0" method="BankTransfer" data-showtype="2" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="img"><img src="/static/themes/default/images/payment/method/BankTransfer.png" alt="Bank Transfer"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="11" data-num="1" data-fee="0.00" data-affix="0">
+                            <div class="ext_txt"><p>Bank Transfer</p></div>                    	</div>
+                    </div>
+                    <div class="payment_list clearfix">
+                        <div class="payment_row" value="9" min="0" max="0" method="CashOnDelivery" data-showtype="4" data-system-type="system">
+                            <div class="check"><input name="PId" type="radio" /></div>
+                            <div class="img"><img src="/static/themes/default/images/payment/method/CashOnDelivery.png" alt="Cash On Delivery"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="payment_contents clearfix">
+                        <div class="payment_note" data-id="9" data-num="1" data-fee="0.00" data-affix="0">
+                            <div class="ext_txt"><p>Cash On Delivery</p></div>                    	</div>
+                    </div>
+                </div>
+            </div>
+            <div class="information_box information_box_products">
+                <div class="box_title">Products</div>
+            </div>
+            <div class="information_box information_products">
+                <div class="box_content information_product">
+                    <div class="item_package hide">
+                        Package 1													</div>
+                    <div class="item_pro_table" data-ovid="0"  data-tid="0">
+                        <div cid="284" class="tr  ">
+                            <div class="td prod_select hide">
+                                <em class="btn_checkbox FontBgColor current"></em>
+                                <input type="checkbox" name="select" value="284" class="va_m" checked />
+                            </div>
+                            <div class="td prod_pic">
+                                <a href="/products/2018-hot-new-lace-insert-bishop-sleeve-eyelet-embroidered-romper-353" title="2018 Hot New Lace Insert Bishop Sleeve" class="pic_box"><img src="/u_file/t/t152/2012/25/products/5483b5de94.jpg?x-oss-process=image/format,webp/resize,m_lfit,h_240,w_240" alt="2018 Hot New Lace Insert Bishop Sleeve" /></a>
+                                <span class="prod_qty">1</span>
+                            </div>
+                            <div class="td prod_info">
+                                <div class="invalid FontBgColor">Invalid</div>
+                                <h4 class="prod_name"><a href="/products/2018-hot-new-lace-insert-bishop-sleeve-eyelet-embroidered-romper-353">2018 Hot New Lace Insert Bishop Sleeve</a></h4>
+                            </div>
+                            <div class="td prod_operate">
+                                <p price="216.98">HK$216.98</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="order_summary_box">
+            <div class="order_summary clearfix">
+                <div class="amount_box information_box">
+                    <div class="box_title">Order summary</div>
+                    <div class="rows clearfix">
+                        <div class="name">Subtotal:</div>
+                        <div class="value"><em>HK$</em><span id="ot_subtotal">216.98</span></div>
+                    </div>
+                    <div class="rows clearfix" id="CouponCharge">
+                        <div class="name">Coupon savings:</div>
+                        <div class="value"><em>- HK$</em><span id="ot_coupon"></span></div>
+                    </div>
+                    <div class="rows clearfix" id="DiscountCharge" style="display:none;">
+                        <div class="name">
+                            Full discount:
+                        </div>
+                        <div class="value"><em>- HK$</em><span id="ot_subtotal_discount">0.00</span></div>
+                    </div>
+                    <div class="rows clearfix" id="ShippingCharge">
+                        <div class="name">Shipping charges:</div>
+                        <div class="value"><em>HK$</em><span id="ot_shipping"></span></div>
+                    </div>
+                    <div class="rows clearfix" id="TaxPrice"  data-type="">
+                        <div class="name">Taxes:</div>
+                        <div class="value"><em>HK$</em><span data-tax="0" id="ot_tax_price"></span></div>
+                    </div>
+                    <div class="rows clearfix" id="ServiceCharge">
+                        <div class="name">Service charge:</div>
+                        <div class="value"><em>HK$</em><span id="ot_fee" data-fee="" data-affix=""></span></div>
+                    </div>
+                    <div class="rows clearfix total_charge" id="TotalCharge">
+                        <div class="name">Grand Total:</div>
+                        <div class="value"><em>HK$</em><span id="ot_total"></span></div>
+                    </div>
+                    <form id="PlaceOrderFrom" method="post" action="/cart/" amountPrice="216.98" userPrice="0" userRatio="100">
+                        <input type="button" value="Place Your Order" class="btn_place_order btn_global sys_shadow_button btn_disabled" id="orderFormSubmit" />
+                        <div id="paypal_button_container"></div>
+                        <input type="hidden" name="order_coupon_code" value="" cutprice="0" />
+                        <input type="hidden" name="order_discount_price" value="0" />
+                        <input type="hidden" name="order_shipping_address_aid" value="-1" />
+                        <input type="hidden" name="order_shipping_address_cid" value="-1" />
+                        <input type="hidden" name="order_shipping_method_sid" value="[]" />
+                        <input type="hidden" name="order_shipping_method_type" value="[]" />
+                        <input type="hidden" name="order_shipping_price" value="[]" />
+                        <input type="hidden" name="order_shipping_oversea" value="0-0" />
+                        <input type="hidden" name="order_payment_method_pid" value="-1" />
+                        <input type="hidden" name="order_cid" value="284" />					<input type="hidden" name="IsBuyNow" value="1" />
+                    </form>
+                    <div class="checkout_button">
+                        <a href="/cart/" class="checkout_btn_back"><span class="icon iconfont icon-mb_add4"></span>Return to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div align="center"><script type='text/javascript' src='//analytics.myshoptago.com/js/analytics.js?Number=JCQ2Z1RLBQ==' ></script><script src="https://www.ueeshop.com/js/fixed.toper.js"></script><script>(function(global, $) {
+    $(document).ready(function() {
+        if($('#currency_box').size()){
+            $.ajax({
+                url: "/app/Request.php",
+                data: {
+                    "module": "Exchange",
+                    "action": "getExchange",
+                },
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if(result.ret==1){
+                        var currency_html  = '',
+                            row = result.msg.array;
+                        currency_html += '<div class="currency_mask"></div>';
+                        currency_html += '<dt>';
+                        currency_html += '	 <a href="javascript:;">'+ueeshop_config.currency+'<div class="arrow"><em></em><i></i></div></a>';
+                        currency_html += '</dt>';
+                        currency_html += '<dd class="default_currency_list">';
+                        currency_html += '<div class="close"></div>';
+                        currency_html += '	<ul>';
+                        for($i=0;$i<row.length;$i++){
+                            currency_html +=	'<li><a href="javascript:;" rel="nofollow" data="'+row[$i]['Currency']+'">'+row[$i]['Currency']+'</li>';
+                        }
+                        currency_html += '	</ul>';
+                        currency_html += '</dd>';
+                        currency_html && $('#currency_box').html(currency_html);
+                        if(result.msg.count>1){
+                            $('#currency_box').addClass('prod_info_currency_more');
+                        }
+                        if($(window).width()<=1000){
+                            $('body #currency_box dt').on('click',function(){
+                                var current = $(this).hasClass('current'),
+                                    box = $(this).parent().find('.default_currency_list');
+                                if(current){
+                                    $(this).removeClass('current');
+                                    $('.currency_mask').hide();
+                                    box.hide().css('opacity',0);
+                                    $('body').css('overflow','auto');
+                                }else{
+                                    $(this).addClass('current');
+                                    $('.currency_mask').show();
+                                    box.show().css('opacity',1);
+                                    $('body').css('overflow','hidden');
+                                }
+                            });
+                            $('body #currency_box .close').on('click',function(){
+                                var box = $(this).parent();
+                                box.removeClass('current');
+                                $('.products_detail_box .detail_right .prod_info_currency dt').removeClass('current');
+                                $('.currency_mask').hide();
+                                $('.default_currency_list').hide().css('opacity',0);
+                                $('body').css('overflow','auto');
+                            })
+                        }
+                    }
+                },
+            });
+            return false;
+        }
+    });
+})(window, jQuery);</script><script>(function(global, $) {
+    $(document).ready(function() {
+        if($('#themes_pdetial_under_button').size()){
+            let $ProId = $('#ProId').val();
+            $.ajax({
+                url: "/app/Request.php",
+                data: {
+                    "module": "Inquiry",
+                    "action": "getInquiryBtn",
+                },
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    let inquiry_btn_html = '<div id="inquiry_box"><a href="/app/inquiry/inquiry_index/?ProId='+$ProId+'" class="button trans3 inquirynow" id="inquiry_btn">'+result.msg.tips+'</a></div>';
+                    $('#themes_pdetial_under_button').append(inquiry_btn_html);
+                },
+            });
+            return false;
+        }
+        $('#inquiry_form').submit(function(){
+            if(global_obj.check_form($(this).find('*[notnull]'), $(this).find('*[format]'))){return false;}
+            var e=$(this).find('input[name=Email]');
+            e.removeAttr('style');
+            if(e.length!=0){
+                if(e.val()!='' && (/^\w+[a-zA-Z0-9-.+_]+@[a-zA-Z0-9-.+_]+\.\w*$/.test(e.val())===false)){
+                    e.css('border', '1px solid red');
+                    e.focus();
+                    global_obj.new_win_alert(lang_obj.format.email,'', '', undefined, '');
+                    return false;
+                }
+            }
+            $(this).find('input:submit').attr('disabled', 'disabled');
+            let $form_data = $(this).serialize();
+            $.ajax({
+                url: "/app/Request.php",
+                data: $form_data+'&module=Inquiry&action=submit_inquiry',
+                type: 'post',
+                dataType: 'json',
+                success: function(result){
+                    $('#inquiry_form input:submit').removeAttr('disabled');
+                    if(result.ret==1){
+                        global_obj.new_win_alert(result.msg.tips, function(){ window.top.location.href=result.msg.BackUrl }, '', undefined, '');
+                    }else{
+                        global_obj.new_win_alert(result.msg.tips);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+})(window, jQuery);</script><script>(function(global, $) {
+    $(document).ready(function() {
+        if($('#chat_box').size()){
+            $.ajax({
+                url: "/app/Request.php",
+                data: {
+                    "module": "Chat",
+                    "action": "getChat",
+                },
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if(result.ret==1){
+                        var IsFloatChat = result.msg.IsFloatChat,
+                            ChatData = $.parseJSON(result.msg.ChatData),
+                            Html = '';
+                        if(ChatData){
+                            Html+='<div class="box">';
+                            Html+='		<div class="box_size">';
+                            Html+='			<a href="javascript:;" class="more"></a>';
+                            if(IsFloatChat==1){
+                                $('#chat_window').find('.chat_box').addClass('cur');
+                            }
+                            $.each(ChatData,function($k,$v){
+                                var toolIconClass = '';
+                                var length = Object.keys($v).length;
+                                if(length>1 || $k=='WeChat'){
+                                    Html+='<div class="chat_item chat_'+$k.toLowerCase()+'" >';
+                                    var toolIconClass  = 'icon-tool_'+ $k.toLowerCase()+1;
+                                    Html+= '<i class="iconfont '+toolIconClass+'"></i>';
+                                    Html+='		<div class="abs">';
+                                    Html+='			<div class="more_box">';
+                                    Html+='				<div class="hidden">';
+                                    $.each($v,function($key,$value){
+                                        $link = $value.Account;
+                                        $target = 'target="_blank"';
+                                        if( $value.Type==3){
+                                            $link = 'javascript:;';
+                                            $target = '';
+                                        }else if($value.Type==0 || $value.Type==2){
+                                            $target = '';
+                                        }
+                                        Html+='<a href="'+$link+'" '+$target+' class="item" '+$value.Type+'>';
+                                        Html+=$value.Name;
+                                        if($value.Type==3){
+                                            Html+='<div class="relimg"><img src="'+$value.PicPath+'" alt="'+$value['Name']+'"></img></div>';
+                                        }
+                                        Html+='</a>';
+                                    });
+                                    Html+='				</div>';
+                                    Html+='			</div>';
+                                    Html+='		</div>';
+                                    Html+='</div>';
+                                }else{
+                                    Html+='<a class="chat_item chat_'+$k.toLowerCase()+'" target="_blank" rel="nofollow" href="'+$v[0].Account+'" title="'+$v[0].Name+'" >';
+                                    var toolIconClass  = 'icon-tool_'+ $k.toLowerCase()+1;
+                                    Html+= '<i class="iconfont '+toolIconClass+'"></i>';
+                                    Html+='</a>';
+                                }
+                            });
+                            Html+='		</div>';
+                            Html+='</div>';
+                            $('#chat_box').html(Html);
+                            function chat_check(){
+                                if($('#chat_window').find('.chat_box').hasClass('cur')){
+                                    return false;
+                                }
+                                var current =$('#chat_box').hasClass('current')?1:0,
+                                    more_height = $(window).width()>768?50:0;
+                                height = $('#chat_box').find('.box_size').outerHeight()-more_height;
+                                if(current){
+                                    var set = 'hidden';
+                                    $('#chat_box .box').stop(true,true).css('overflow',set).find('.more').show();
+                                    $('#chat_box').removeClass('current').find('.box').stop(true,true).animate({'height':$(window).width()>768?50:40},400);
+                                }else{
+                                    var set = 'visible';
+                                    $('#chat_box .box').stop(true,true).css('overflow',set).find('.more').hide();
+                                    $('#chat_box').addClass('current').find('.box').stop(true,true).animate({'height':height},400);
+                                }
+                                console.log(set);
+                            }
+                            if($(window).width()<=768){
+                                $('#chat_window .more').on('click',function(){
+                                    chat_check();
+                                    $('#chat_window .chat_box .box .more').show();
+                                })
+                            }else{
+                                $('#chat_box .box').hover(function(){
+                                    chat_check();
+                                },function(){
+                                    chat_check();
+                                })
+                            }
+                        }
+
+                    }
+                }
+            });
+            return false;
+        }
+    });
+})(window, jQuery);</script></div>		<script type="text/javascript">
+    $(function() {
+        var anTime0 = 0;
+        var Analytics0 = "";
+        var checkAnalytics0 = setInterval(function() {
+            Analytics0 = analytics_click_statistics(4);
+            if (Analytics0 != false) {
+                clearInterval(checkAnalytics0);
+            }
+            ++anTime0;
+            if (anTime0 > 10) {
+                clearInterval(checkAnalytics0);
+            }
+        }, 1000);
+    });
+</script>
+</body>
+</html>

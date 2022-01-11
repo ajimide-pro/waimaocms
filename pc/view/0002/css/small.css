@@ -1,0 +1,16 @@
+@charset "utf-8";
+@media screen and (max-width: 1366px) {
+  
+}
+@media screen and (max-width: 1280px) {
+  
+  .footer .w1200 .footerTop .footerNav ul {
+    margin-left: calc(100 / 1080 * 100%);
+  }
+  .footer .w1200 .footerTop .footerNav ul:last-child {
+    margin-left: calc(100 / 1080 * 100%);
+  }
+  .footer .w1200 .footerTop .wechat {
+    padding-left: 0;
+  }
+}

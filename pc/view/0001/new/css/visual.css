@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/*Banner插件*/
+#banner{ position: relative; }
+#banner_edit{ width:100%; height:600px; margin: 0 auto; position:relative; overflow:hidden;}
+#banner_edit .banner_box{ width:100%; height:100%; position:absolute; top:0; left:0;}
+#banner_edit .banner_box .banner_title,
+#banner_edit .banner_box .banner_brief{ position:absolute; cursor:default; white-space:pre-wrap; text-align:left;}
+#banner_edit .banner_box .banner_mainpic{position: absolute;cursor: default;}
+#banner_edit .banner_box .banner_list{ width:100%; height:100%; position:relative; overflow:hidden;}
+#banner_edit .banner_box .banner_list.mask_layer:after{width: 100%;height: 100%;position: absolute;left: 0;top: 0;content: '';background-color: rgba(0, 0, 0, 0.3);}
+#banner_edit .banner_box .banner_list a{ width:100%; height:100%; display:block; cursor:pointer;}
+#banner_edit .banner_box .banner_list .banner_position{ width:100%; height:100%; position:absolute; top:0; left:0; text-align:center;}
+#banner_edit .banner_box .banner_list .banner_bg{ width:100%; height:100%; background-repeat:no-repeat; background-size:100% 100%;}
+#banner_edit .banner_box .banner_list img{ max-width:100%;max-height: 100%;}
+#banner_edit .banner_tab{ width:100%; height:15px; position:absolute; bottom:15px; left:0; text-align:center;}
+#banner_edit .banner_tab a{ width:10px; height:10px; margin:0 3px; background:#f1f1f1; display:inline-block; border-radius:5px;}
+#banner_edit .banner_tab a.on{ background:#f00;}
+#banner_edit .banner_loading{ width:100%; height:100%; position:absolute; top:0; left:0; background:url(../themes/default/images/global/loading_oth.gif) #fff center no-repeat;}
+
+
+/* Banner图效果3 slidetype3 */
+#banner_edit.banner_slidetype3 .banner_slide_mask1{ display:none; width:100%; height:100%; background:#fff; position:absolute; left:0; top:0;}
+#banner_edit.banner_slidetype3 .banner_slide_mask2{ display:none; width:100%; height:100%; background:#fff; position:absolute; left:-100%; top:0;}
+#banner_edit.banner_slidetype3 .banner_slide_mask2:after{ width:100%; height:100%; content:''; position:absolute; left:0; top:0; background:rgba(0,0,0,0.5);}
+#banner_edit.banner_slidetype3 .banner_list{ position:absolute; left:0; top:0;}
+/* Banner文字效果 */
+
+/*可视化编辑插件框架*/
+.plugins_edit_contents{ width:100%; height:100%; position:absolute; top:-2px; left:-2px; border:2px dashed transparent;}
+.plugins_edit_contents.current{ border:2px solid #4a8bf1; z-index:1;}
+.plugins_edit_contents .plugins_pos{ display:none; width:100%; height:100%; position:absolute; top:0; left:0; background:rgba(0,0,0,0.3);}
+.plugins_edit_contents .plugins_layout_mask{ width:100%; height:100%; position:absolute; top:0; left:0; background:url(../themes/default/images/global/loading_oth.gif) #fff no-repeat center; z-index:20;}
+.plugin_edit_box{line-height: 20px;background:#4a8bf1; position:absolute; top:18px; left:50%; transition: all 0.2s ease-in-out; opacity:0; z-index:0; border-radius:5px; box-shadow:0 0 10px 0 rgba(0,0,0,0.3); transform:translate(-50%, -10px);}
+.plugin_edit_box.current{ opacity:1; z-index:1100; transform:translate(-50%, 0);}
+.plugin_edit_box .plugins_eidt_item{ display:inline-block;width: 40px;padding: 10px 60px 10px 90px; font-family:Arial; font-size:16px; line-height:20px; color:#fff; cursor:pointer;}
+.plugin_edit_box .plugins_eidt_item.pluginseffect{background:url(../themes/default/images/global/icon_pluginseffect.png) 60px center no-repeat;}
+.plugin_edit_box .plugins_eidt_item.pluginslayout{background:url(../themes/default/images/global/icon_pluginslayout.png) 60px center no-repeat;}
+.plugin_edit_box .plugins_eidt_item.pluginseditor{background:url(../themes/default/images/global/icon_pluginseditor.png) 60px center no-repeat;}
+/*.plugin_edit_box .plugins_eidt_item.pluginseditor.pluginseditorbanner{ width:110px; background-position:40px; text-align:center;}*/
+.plugin_edit_mask{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+.plugin_edit_mask.current{background: rgba(0, 0, 0, 0.1);z-index: 1100;}
+
+
+.current_edit .banner_title,
+.current_edit .banner_brief,
+.current_edit .banner_mainpic{border: 2px dashed #4a8bf1;cursor: move !important;}
+.current_edit .banner_title.hover,
+.current_edit .banner_brief.hover,
+.current_edit .banner_mainpic.hover{background-color: rgba(0,0,0,0.3);}
+.current_edit .banner_list a{cursor: default !important;}
+
+/* 默认板块 */
+.global_start_design{width: 100%;height: 1000px;background-color: #f6f6f6;background-image: url(../themes/default/images/global/icon_start_design.png);background-repeat: no-repeat;background-position: center 300px;padding-top: 480px;color: #555555;font-size: 40px;text-align: center;box-sizing: border-box;}
+
+/* 响应式 */
+@media (max-width: 768px) {
+	/*#banner_edit .banner_box .banner_title{width: 100%;line-height: 130%;padding: 0 25px;text-align: center;box-sizing: border-box; top: 30% !important;left: 0 !important;font-size: 28px !important;}*/
+	/*#banner_edit .banner_box .banner_brief{width: 100%;line-height: 150%;padding: 0 25px;text-align: center;box-sizing: border-box;top: 45% !important;left: 0 !important;font-size: 16px !important;}*/
+	#banner_edit .banner_tab{display: none;}
+}
+
+*[visualstatus=current]{ z-index: 999; }

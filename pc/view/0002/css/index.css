@@ -1,0 +1,423 @@
+/* 公用标题 */
+.indexTitle {
+  text-align: center;
+  padding-top: 74px;
+}
+.indexTitle p {
+  font-size: 2rem;
+  color: #2b3346;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.indexTitle .tips {
+  font-size: .8125rem;
+  color: #5a6071;
+  margin-top: .625rem;
+}
+.close {
+  position: absolute;
+  right: -48px;
+  top: -36px;
+  cursor: pointer;
+}
+
+
+
+/* 企业级网站建站系统(banner) */
+.indexBanner {
+  width: 100%;
+  height: auto;
+  background: url(../images/new_index/banner_bg.jpg) no-repeat;
+  background-size: cover;
+}
+.indexBanner .w1200 {
+  max-height: 100%;
+  padding-top: 4.75rem;
+}
+.indexBanner .w1200 .indexBanner_title {
+    text-align: center;
+}
+/* .indexBanner .w1200 .indexBanner_title img {
+    width: 540px;
+    height: 100px;
+    object-fit: contain;
+}*/
+.indexBanner .w1200 .indexBanner_title {
+  font-size: 1.625rem;
+  color: #333333;
+  text-align: center;
+}
+.indexBanner .w1200 .indexBanner_title h3 {
+    font-weight: 900;
+    position: relative;
+}
+.indexBanner .w1200 .indexBanner_title h3 span {
+    color: transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+    /* background-image: linear-gradient(45deg, #f84b05, #f9ab1a); */
+    background-image: linear-gradient(45deg,#f84805,#fab51e);
+}
+.indexBanner .w1200 .indexBanner_title p {
+	font-size: .9375rem;
+	color: #333333;
+    letter-spacing: 15px;
+    padding: 1.25rem 0px 2.875rem;
+    font-family: MicrosoftYaHei;
+}
+.indexBanner .w1200 .indexBanner_title h3 img {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: -2.6875rem;
+}
+.indexBanner .w1200 .menu {
+  display: flex;
+  justify-content: center;
+}
+.indexBanner .w1200 .menu a {
+  display: inline-block;
+  font-size: .75rem;
+  color: #f84311;
+  width: 148px;
+  border: 1px solid #f84311;
+  text-align: center;
+  line-height: 1.875rem;
+  border-radius: 23px;
+  margin-left: 20px;
+  background-repeat: no-repeat;
+  background-position: 30px center;
+  transition: all 0.3s;
+}
+.indexBanner .w1200 .menu a i {
+  font-family: bannerIco;
+  font-size: 1rem;
+  margin-right: .25rem;
+}
+.indexBanner .w1200 .menu a:first-child {
+  margin-left: 0;
+}
+.indexBanner .w1200 .menu a:hover {
+  background: #f84311;
+  color: #fff;
+  transition: all 0.3s;
+}
+.indexBanner .w1200 .menu .demonst:hover {
+  background: #f84311;
+}
+.indexBanner .w1200 .menu .calendar:hover {
+  background: #f84311;
+}
+.indexBanner .w1200 .menu .download:hover {
+  background: #f84311;
+}
+.indexBanner .swiper-container {
+    padding-top: 3.75rem;
+    padding-bottom: 4.375rem;
+}
+.indexBanner .swiper-container .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.indexBanner .swiper-container .swiper-slide img {
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.15);
+}
+.indexBanner .swiper-button-next,
+.indexBanner .swiper-button-prev {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+.indexBanner .swiper-button-next:after,
+.indexBanner .swiper-button-prev:after {
+    display: none;
+}
+.indexBanner .swiper-button-next.swiper-button-disabled,
+.indexBanner .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: all;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+/* 核心优势 */
+.indexBlock .w1200 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2.1875rem;
+}
+.indexBlock .indexTitle {
+    padding-top: 0px;
+}
+.indexBlock .w1200 .list {
+  width: calc(50% - 10px);
+  margin-bottom: 2.3125rem;
+  margin-right: 10px;
+}
+.indexBlock .w1200 .list:nth-child(2n) {
+  margin-right: 0;
+}
+.indexBlock .w1200 .list .img {
+  display: flex;
+  justify-content: center;
+}
+.indexBlock .w1200 .list .img img {
+  width: 52px;
+  height: 50px;
+  object-fit: contain;
+}
+.indexBlock .w1200 .list .title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #43464d;
+  text-align: center;
+  margin-top: 20px;
+}
+.indexBlock .w1200 .list .tips {
+  font-size: .75rem;
+  color: #6f7480;
+  line-height: 25px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* 多样化的功能扩展 */
+/* .indexBlock2 {
+  background: #003049;
+  height: 555px;
+} */
+
+/* 最新动态 */
+.indexBlock3 {
+  background-color: #fcfafa;
+}
+.indexBlock3 .indexTitle {
+  padding-top: 1.5625rem;
+}
+.indexBlock3 .w1200 {
+  margin-top: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+@media screen and (min-width:960px) {
+  /* PC */
+  .indexBlock3 .w1200 .newList, .indexBlock3 .w1200 .questionList {
+    max-width: 560px;
+    width: calc((100% - 80px) / 2);
+    float: left;
+    margin-left: 80px;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  /* 手机 */
+  .indexBlock3 .w1200 .newList,
+  .indexBlock3 .w1200 .questionList {
+
+    width: 100%;
+    margin-bottom: 1.875rem;
+    /* float: left; */
+    /* margin-left: 80px; */
+  }
+}
+
+.indexBlock3 .w1200 .newList:first-child,
+.indexBlock3 .w1200 .questionList:first-child {
+  margin-left: 0;
+}
+.indexBlock3 .w1200 .newList .title,
+.indexBlock3 .w1200 .questionList .title {
+  position: relative;
+  margin-bottom: 20px;
+}
+.indexBlock3 .w1200 .newList .title a,
+.indexBlock3 .w1200 .questionList .title a {
+  display: block;
+}
+.indexBlock3 .w1200 .newList .title a img,
+.indexBlock3 .w1200 .questionList .title a img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.indexBlock3 .w1200 .newList .title p,
+.indexBlock3 .w1200 .questionList .title p {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 35px;
+  z-index: 100;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 0px 0px 0px 30px;
+  font-family: MicrosoftYaHei-Bold;
+  background-color: rgba(248, 67, 17, 0.9);
+}
+.indexBlock3 .w1200 .newList ul li,
+.indexBlock3 .w1200 .questionList ul li {
+  position: relative;
+  border-bottom: 1px dashed rgba(7, 0, 2, 0.1);
+  overflow: hidden;
+}
+.indexBlock3 .w1200 .newList ul li a,
+.indexBlock3 .w1200 .questionList ul li a {
+  font-size: 15px;
+  color: #5a6071;
+  line-height: 48px;
+}
+.indexBlock3 .w1200 .newList ul li a span,
+.indexBlock3 .w1200 .questionList ul li a span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  background: #f84311;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.indexBlock3 .w1200 .newList ul li a b,
+.indexBlock3 .w1200 .questionList ul li a b {
+  font-style: normal;
+  font-weight: normal;
+  display: block;
+  float: left;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 105px);
+}
+.indexBlock3 .w1200 .newList ul li a i,
+.indexBlock3 .w1200 .questionList ul li a i {
+  width: auto;
+  display: block;
+  float: right;
+}
+
+/* 全方位服务保障 */
+.indexBlock4 {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/new_index/bottom_img01.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.indexBlock4 .index4Title h3 {
+  font-size: 2.25rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: MicrosoftYaHei-Bold;
+}
+.indexBlock4 .index4Title .tips {
+  font-size: .875rem;
+  font-family: MicrosoftYaHei;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+.indexBlock4 .index4Title .tips a {
+  color: rgba(255, 255, 255, 0.9);
+}
+.indexBlock4 .index4Title .consult {
+  width: 164px;
+  height: 46px;
+  margin: 0 auto;
+  display: block;
+  font-size: 16px;
+  margin-top: 30px;
+  color: #f84311;
+  line-height: 46px;
+  text-align: center;
+  border-radius: 23px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 30px 0px rgba(248, 67, 17, 0.2);
+}
+
+
+
+/* 登陆注册 */
+.blackBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.loginWindow {
+  display: none;
+  width: 400px;
+  height: 515px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  border: solid 1px #eeeeee;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  text-align: center;
+}
+.loginWindow .content {
+  padding: 51px 35px 0;
+}
+.loginWindow .content .title {
+  font-size: 24px;
+  color: #000;
+  line-height: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(156, 156, 156, 0.2);
+  position: relative;
+}
+.loginWindow .content .title span {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #f84311;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2px;
+}
+.loginWindow .content .wechat {
+  margin-top: 37px;
+}
+.loginWindow .content .tips {
+  width: 266px;
+  text-align: center;
+  padding-left: 38px;
+  margin: 0 auto;
+  background: url(../images/loginIco.png) no-repeat left center;
+  font-size: 14px;
+  color: #666;
+  line-height: 26px;
+  margin-top: 37px;
+}
+.loginWindow .bottom {
+  margin-top: 32px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #808080;
+  background: #f0f0f0;
+}
+.loginWindow .bottom a {
+  font-size: 14px;
+  color: #f84311;
+  margin: 0 3px;
+}

@@ -1,0 +1,52 @@
+.t092_slide .srcoll_btn_prev{background-image:url(../../t092/images/icon_ixbtn.svg);}
+.t092_slide .srcoll_btn_next{background-image:url(../../t092/images/icon_ixbtn.svg);}
+.t123_m_banner .box .r_more:after{background-image: url(../../t123/images/icon_white.png);}
+.t134_slide .srcoll_btn_prev{background-image: url(../../t134/images/arr_left.png);}
+.t134_slide .srcoll_btn_next{background-image: url(../../t134/images/arr_right.png);}
+.t135_slide .srcoll_btn{background-image:url(../../t135/images/pro_btn.png);}
+.t135_blog_btn{background-image: url(../../t135/images/check_out.png);}
+.t136_blog_btn span{background-image:url(../../t136/images/arrow.png);}
+.t136_item_btn a::after{background-image:url(../../t136/images/arrow.png);}
+.t136_video_con .close_btn{background-image: url(../../t136/images/close_btn.png);}
+.t136_play_btn{background-image:url(../../t136/images/video_play.png);}
+.t136_product_prev{background-image:url(../../t136/images/arrow.png);}
+.t136_product_next{background-image:url(../../t136/images/arrow.png);}
+.t136_operator_btn{background-image: url(../../t136/images/icon_collect.png);}
+.t136_operator_btn:hover, .t136_operator_btn.is_in{background-image: url(../../t136/images/icon_collect_s.png);}
+.t138_sl_icon{background-image: url(../../t138/images/ly_sl_icon.png);}
+.t138_sl_icon.is_in{background-image: url(../../t138/images/ly_sl_active_icon.png);}
+.t138_sr_icon{background-image: url(../../t138/images/ly_sr_icon.png);}
+.t138_sr_icon.is_in{background-image: url(../../t138/images/ly_sr_active_icon.png);}
+.t140_ly_shopnow::after{background-image: url(../../t140/images/shop_btn.png);}
+@media screen and (max-width: 1000px) {.t140_ly_shopnow i{background-image: url(../../t140/images/p_shop_btn.png);}}
+.t140_ly_conbox_a::after{background-image: url(../../t140/images/park_four_btn.png);}
+.t140_ly_prev{background-image: url(../../t140/images/product_btn1.png);}
+.t140_ly_next{background-image: url(../../t140/images/product_btn2.png);}
+.t142_slide .srcoll_btn_prev{background-image: url(../../t142/images/prev_btn.png);}
+.t142_slide .srcoll_btn_prev:hover{background-image: url(../../t142/images/prev_active_btn.png);}
+.t142_slide .srcoll_btn_next{background-image: url(../../t142/images/next_btn.png);}
+.t142_slide .srcoll_btn_next:hover{background-image: url(../../t142/images/next_active_btn.png);}
+.t143_slide .srcoll_btn_prev{background-image: url(../../t143/images/poster_left.png);}
+.t143_slide .srcoll_btn_next{background-image: url(../../t143/images/poster_right.png);}
+.t143_ly_leftbtn{background-image: url(../../t143/images/product_left.png);}
+.t143_ly_rightbtn{background-image: url(../../t143/images/product_right.png);}
+.t144_ly_video_btn{background-image:url(../../t144/images/icons.png);}
+.t144_ly_close_btn{background-image: url(../../t144/images/close_btn.png);}
+.t144_ly_btn a{background-image:url(../../t144/images/icons.png);}
+.t145_ly_fullDetail::after{background-image:url(../../t145/images/icons.png);}
+.t145_ly_share a::before{background-image:url(../../t145/images/icons.png);}
+.t147_product_discount_tags{background-image: url(../../t147/images/m_icon_seckill.png);}
+.t149_ly_btn a i{background-image:url(../../t149/images/icons_pc.png);}
+.t150_ly_mail_img .newsletter_bgimg{background-image:url(../../t150/images/icons_pc.png);}
+.t154_ly_arrow{background-image:url(../../t154/images/icon.png);}
+.t157_slide .srcoll_btn_prev{background-image: url(../../t157/images/icon.png);}
+.t157_slide .srcoll_btn_next{background-image: url(../../t157/images/icon.png);}
+.t158_video_btn{background-image:url(../../t158/images/icons_video.svg);}
+.t158_close_btn{background-image:url(../../t158/images/close_btn.png);}
+@media screen and (max-width:1000px){
+    .t158_slide .srcoll_btn{background-image:url(../../t158/images/icon_arrow.svg);}
+    .t158_slide_seven .srcoll_btn{background-image:url(../../t158/images/icons_arrow2.svg);}
+}
+.t162_item_cart span{background-image:url(../../t162/images/icons.png);}
+.t163_ly_btn i{background-image:url(../../t163/images/icons.png);}
+.t164_slide .srcoll_btn{background-image:url(../../t164/images/icons.png);}

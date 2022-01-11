@@ -1,0 +1,297 @@
+/* 多样化的功能扩展 */
+.indexBlock2 {
+    display: flex;
+    align-items: center;
+}
+.indexBlock2 .swiper-container {
+    height: 355px;
+}
+.indexBlock2 .swiper-wrapper {
+    height: 100%;
+}
+.indexBlock2 .swiper-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.indexBlock2_left {
+    width: 45%;
+    height: 100%;
+}
+.indexBlock2_left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.indexBlock2_right {
+    width: 45%;
+}
+.indexBlock2_right_title {
+    margin-bottom: 40px;
+}
+.indexBlock2_right_title h3 {
+    font-family: MicrosoftYaHeiLight;
+	font-size: 38px;
+    margin-bottom: 30px;
+	color: #ffffff;
+}
+.indexBlock2_right_title p {
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	color: #ffffff;
+	opacity: 0.5;
+}
+.indexBlock2_right_desc h4 {
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 16px;
+	color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+.indexBlock2_right_desc h4::before {
+    width: 4px;
+    height: 16px;
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%,-50%);
+    background-color: #f84311;
+    display: inline-block;
+}
+.indexBlock2_right_desc p {
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 26px;
+	color: #ffffff;
+	opacity: 0.5;
+    text-align: justify;
+}
+
+.swiper-pagination {
+    width: 45%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 5%;
+    left: 55%;
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0px auto;
+    margin-left: 0px;
+}
+/*自定义分页器的样式*/
+.swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    background: transparent;
+}
+.swiper-pagination-bullet img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+}
+.swiper-pagination-bullet p {
+    line-height: 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+/*自定义分页器激活时的样式表现*/
+.swiper-pagination-bullet-active img {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+}
+
+/* 绑定手机弹窗 */
+.BindingPhone_outer {
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.BindingPhone {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFFFFF;
+	border-radius: 5px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.BindingPhone .BindingPhone_title {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0px 30px 0px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(156,156,156, 0.2);
+}
+.BindingPhone .BindingPhone_title h3 {
+	font-size: 24px;
+	color: #000000;
+    text-align: center;
+}
+.BindingPhone .BindingPhone_title::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: -1.5px;
+    transform: translate(-50%,0%);
+    background-color: #f84311;
+}
+.BindingPhone_form {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.BindingPhone_form h4 {
+    text-align: justify;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 24px;
+	color: #808080;
+    margin-bottom: 30px;
+}
+.BindingPhone_form_input {
+    width: 100%;
+	border-radius: 5px;
+    margin-bottom: 20px;
+	border: solid 1px #cccccc;
+}
+.BindingPhone_form_input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    text-indent: 20px;
+    line-height: 40px;
+	border-radius: 5px;
+}
+.BindingPhone_form_input input::-webkit-input-placeholder { 
+    /* WebKit browsers */ 
+    color: #999999;
+} 
+.BindingPhone_form_input input:-moz-placeholder { 
+    /* Mozilla Firefox 4 to 18 */ 
+    color: #999999;
+} 
+.BindingPhone_form_input input::-moz-placeholder { 
+    /* Mozilla Firefox 19+ */ 
+    color: #999999;
+} 
+.BindingPhone_form_input input:-ms-input-placeholder { 
+    /* Internet Explorer 10+ */ 
+    color: #999999;
+}
+.BindingPhone_form_code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.BindingPhone_form_input button {
+    border: none;
+    outline: none;
+    width: 50%;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	color: #f84311;
+    margin-right: 15px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+.BindingPhone_Submit {
+    width: 100%;
+}
+.BindingPhone_Submit button {
+    width: 100%;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	line-height: 40px;
+	color: #ffffff;
+    text-align: center;
+    border: none;
+    outline: none;
+	border-radius: 22px;
+    cursor: pointer;
+    background-color: #f84311;
+}
+.BindingPhone_agreement {
+    text-align: center;
+    display: flex;
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 0px 0px 5px 5px;
+}
+.BindingPhone_agreement input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 5px;
+    border: 1px solid #999999;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+}
+.BindingPhone_agreement input[type="checkbox"]::before {
+    border: 1px solid #999999;
+    content: "";
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+    -webkit-transition: all 150ms linear;
+    transition: all 150ms linear;
+    width: 5px;
+    height: 3px;
+    z-index: 1;
+    border-top-style: none;
+    border-right-style: none;
+    position: absolute;
+    bottom: 4px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.BindingPhone_agreement input[type="checkbox"]:checked::before {
+    opacity: 0;
+}
+.BindingPhone_agreement span {
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #808080;
+}
+.BindingPhone_agreement a {
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #f84311;
+}
